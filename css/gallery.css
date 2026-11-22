@@ -1,0 +1,973 @@
+/* ===========================================================
+   PAGE 4 — GALLERY | D2 Dark Minimalist
+   Keep in css/gallery.css. All rules are scoped to .gallery-page.
+   =========================================================== */
+.gallery-page {
+    --gl-bg: #1C1C1A;
+    --gl-panel: #292622;
+    --gl-cream: #F2EDE5;
+    --gl-accent: #CDA786;
+    --gl-copy: #D4C9BE;
+    --gl-muted: #AFA49B;
+    --gl-border: #494039;
+    background: var(--gl-bg);
+    color: var(--gl-cream);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: clip;
+}
+
+.gallery-page *,
+.gallery-page *::before,
+.gallery-page *::after {
+    box-sizing: border-box;
+}
+
+.gallery-page .gl-container {
+    width: min(1180px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+.gallery-page h1,
+.gallery-page h2,
+.gallery-page h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+}
+
+.gallery-page .gl-eyebrow {
+    margin: 0;
+    color: var(--gl-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1.7;
+}
+
+/* Introduction */
+.gallery-page .gl-hero {
+    padding: 112px 0 98px;
+    border-bottom: 1px solid #3B3631;
+}
+
+.gallery-page .gl-hero h1 {
+    margin: 26px 0 27px;
+    max-width: 1020px;
+    font-size: clamp(54px, 6.4vw, 92px);
+    line-height: 1.07;
+    letter-spacing: -2px;
+}
+
+.gallery-page .gl-hero h1 span,
+.gallery-page .gl-section-heading h2 span,
+.gallery-page .gl-end h2 span {
+    color: var(--gl-accent);
+}
+
+.gallery-page .gl-hero-copy {
+    max-width: 770px;
+    color: var(--gl-copy);
+    font-size: clamp(16px, 1.6vw, 19px);
+    line-height: 1.95;
+    margin: 0;
+}
+
+.gallery-page .gl-scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 9px 0;
+    margin-top: 39px;
+    color: var(--gl-accent);
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gl-accent);
+    transition: gap .25s ease;
+}
+
+.gallery-page .gl-scroll:hover {
+    gap: 24px;
+}
+
+/* Featured personal frame */
+.gallery-page .gl-feature {
+    padding-top: 95px;
+}
+
+.gallery-page .gl-feature-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 27px;
+}
+
+.gallery-page .gl-feature-heading>p:last-child {
+    margin: 0;
+    color: var(--gl-muted);
+    font-size: 14px;
+}
+
+.gallery-page .gl-feature-panel {
+    display: grid;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    min-height: 490px;
+    background: var(--gl-panel);
+    border: 1px solid var(--gl-border);
+    border-radius: 23px;
+    overflow: hidden;
+}
+
+.gallery-page .gl-feature-image {
+    position: relative;
+    display: block;
+    min-height: 490px;
+    overflow: hidden;
+    background: #20221E;
+}
+
+.gallery-page .gl-feature-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    display: block;
+    object-fit: cover;
+    object-position: center 43%;
+    transition: transform .6s ease;
+}
+
+.gallery-page .gl-feature-image:hover img,
+.gallery-page .gl-feature-image:focus-visible img {
+    transform: scale(1.045);
+}
+
+.gallery-page .gl-feature-image::after {
+    content: '';
+    position: absolute;
+    inset: 55% 0 0;
+    pointer-events: none;
+    background: linear-gradient(transparent, #000A);
+}
+
+.gallery-page .gl-feature-image-label {
+    position: absolute;
+    z-index: 1;
+    left: 28px;
+    right: 28px;
+    bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+    color: #F2EDE5;
+}
+
+.gallery-page .gl-feature-image-label span {
+    font-size: 21px;
+    line-height: .7;
+}
+
+.gallery-page .gl-feature-copy {
+    padding: clamp(36px, 5vw, 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gallery-page .gl-feature-copy h2 {
+    font-size: clamp(38px, 4.1vw, 57px);
+    line-height: 1.15;
+    margin: 22px 0 22px;
+}
+
+.gallery-page .gl-feature-copy h2 em {
+    color: var(--gl-accent);
+    font-style: normal;
+}
+
+.gallery-page .gl-feature-copy>p:not(.gl-eyebrow):not(.gl-feature-aside) {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--gl-copy);
+    margin: 0;
+}
+
+.gallery-page .gl-feature-aside {
+    margin: 34px 0 0;
+    color: #D6B698;
+    font: italic 17px/1.6 Georgia, serif;
+}
+
+/* Collection heading, filter chips */
+.gallery-page .gl-journal {
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+.gallery-page .gl-section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.gallery-page .gl-section-heading h2 {
+    font-size: clamp(36px, 4.1vw, 53px);
+    line-height: 1.16;
+    margin: 15px 0 0;
+}
+
+.gallery-page .gl-section-heading>p {
+    max-width: 385px;
+    margin: 0 0 5px;
+    color: var(--gl-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.gallery-page .gl-filter-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.gallery-page .gl-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 32px;
+}
+
+.gallery-page .gl-filters label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1px solid #655348;
+    color: #DCCDBD;
+    background: #23211F;
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    transition: color .25s, background .25s, border-color .25s;
+}
+
+.gallery-page .gl-filters label:hover {
+    border-color: #A58466;
+}
+
+.gallery-page #gl-all:checked~.gl-filters label[for="gl-all"],
+.gallery-page #gl-friends:checked~.gl-filters label[for="gl-friends"],
+.gallery-page #gl-adventures:checked~.gl-filters label[for="gl-adventures"],
+.gallery-page #gl-milestones:checked~.gl-filters label[for="gl-milestones"],
+.gallery-page #gl-videos:checked~.gl-filters label[for="gl-videos"] {
+    color: #1C1C1A;
+    background: var(--gl-accent);
+    border-color: var(--gl-accent);
+    font-weight: 700;
+}
+
+.gallery-page #gl-all:focus-visible~.gl-filters label[for="gl-all"],
+.gallery-page #gl-friends:focus-visible~.gl-filters label[for="gl-friends"],
+.gallery-page #gl-adventures:focus-visible~.gl-filters label[for="gl-adventures"],
+.gallery-page #gl-milestones:focus-visible~.gl-filters label[for="gl-milestones"],
+.gallery-page #gl-videos:focus-visible~.gl-filters label[for="gl-videos"] {
+    outline: 2px solid var(--gl-cream);
+    outline-offset: 3px;
+}
+
+/* Masonry-ish columns, retains distinct proportions of photos */
+.gallery-page .gl-grid {
+    columns: 3 260px;
+    column-gap: 20px;
+}
+
+.gallery-page .gl-tile {
+    margin: 0 0 20px;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    background: #24211F;
+    border: 1px solid var(--gl-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.gallery-page .gl-tile:hover {
+    border-color: #A48366;
+    transform: translateY(-3px);
+}
+
+.gallery-page .gl-tile-media {
+    position: relative;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: #171717;
+}
+
+.gallery-page .gl-tile--wide .gl-tile-media {
+    aspect-ratio: 5 / 3.6;
+}
+
+.gallery-page .gl-tile-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .55s ease;
+}
+
+.gallery-page .gl-tile-media:hover img,
+.gallery-page .gl-tile-media:focus-visible img {
+    transform: scale(1.045);
+}
+
+.gallery-page .gl-tile--portrait .gl-tile-media img {
+    object-position: center 33%;
+}
+
+.gallery-page .gl-tile--wide .gl-tile-media img {
+    object-position: center;
+}
+
+.gallery-page .gl-view-icon {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #fff;
+    border: 1px solid #FFFFFF66;
+    background: #1C1C1ABD;
+    font-size: 20px;
+    transition: background .25s;
+}
+
+.gallery-page .gl-image-link:hover .gl-view-icon {
+    background: #A17B5F;
+}
+
+.gallery-page .gl-video-media {
+    aspect-ratio: 4 / 5;
+}
+
+.gallery-page .gl-video-media video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #151515;
+    object-fit: contain;
+}
+
+.gallery-page .gl-caption {
+    padding: 17px 18px 19px;
+}
+
+.gallery-page .gl-caption>span {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--gl-accent);
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+
+.gallery-page .gl-caption strong {
+    display: block;
+    font: 23px/1.25 Georgia, serif;
+    color: var(--gl-cream);
+}
+
+.gallery-page .gl-caption p {
+    margin: 9px 0 0;
+    color: var(--gl-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.gallery-page #gl-friends:checked~.gl-grid .gl-tile:not(.gl-cat-friends),
+.gallery-page #gl-adventures:checked~.gl-grid .gl-tile:not(.gl-cat-adventures),
+.gallery-page #gl-milestones:checked~.gl-grid .gl-tile:not(.gl-cat-milestones),
+.gallery-page #gl-videos:checked~.gl-grid .gl-tile:not(.gl-cat-videos) {
+    display: none;
+}
+
+.gallery-page .gl-help {
+    color: #ACA095;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 22px 0 0;
+}
+
+/* Closing card */
+.gallery-page .gl-end {
+    margin-bottom: 110px;
+    padding: clamp(31px, 5.4vw, 65px);
+    background: linear-gradient(145deg, #352C27, #242321);
+    border: 1px solid #54463A;
+    border-radius: 22px;
+}
+
+.gallery-page .gl-end h2 {
+    font-size: clamp(34px, 4.1vw, 54px);
+    line-height: 1.15;
+    margin: 19px 0 20px;
+}
+
+.gallery-page .gl-end>p:not(.gl-eyebrow) {
+    max-width: 740px;
+    color: var(--gl-copy);
+    font-size: 16px;
+    line-height: 1.85;
+    margin: 0;
+}
+
+.gallery-page .gl-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.gallery-page .gl-button {
+    min-height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    padding: 13px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 1px solid #816247;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform .25s, background .25s;
+}
+
+.gallery-page .gl-button:hover {
+    transform: translateY(-3px);
+}
+
+.gallery-page .gl-button--primary {
+    background: #9F7859;
+    color: white;
+}
+
+.gallery-page .gl-button--outline {
+    background: #292521;
+    color: var(--gl-cream);
+}
+
+/* CSS-only lightbox: each photo opens inside this page */
+.gallery-page .gl-lightbox {
+    position: fixed;
+    z-index: 10000;
+    inset: 0;
+    padding: 28px;
+    display: grid;
+    place-items: center;
+    background: #090909EA;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .24s, visibility .24s;
+}
+
+.gallery-page .gl-lightbox:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.gallery-page .gl-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    cursor: zoom-out;
+}
+
+.gallery-page .gl-lightbox-frame {
+    position: relative;
+    z-index: 1;
+    max-width: min(100%, 1000px);
+    width: fit-content;
+    max-height: calc(100dvh - 56px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: #24211F;
+    border: 1px solid #645345;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 22px 80px #000A;
+}
+
+.gallery-page .gl-lightbox-frame img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 145px);
+    min-height: 0;
+    object-fit: contain;
+    background: #0B0B0B;
+}
+
+.gallery-page .gl-lightbox-frame figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 20px;
+    padding: 15px 20px;
+}
+
+.gallery-page .gl-lightbox-frame figcaption strong {
+    color: var(--gl-cream);
+    font: 21px Georgia, serif;
+}
+
+.gallery-page .gl-lightbox-frame figcaption span {
+    color: var(--gl-muted);
+    font-size: 13px;
+}
+
+.gallery-page .gl-lightbox-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #FFFFFF77;
+    background: #181614E8;
+    border-radius: 50%;
+    color: white;
+    font-size: 27px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.gallery-page .gl-lightbox-close:hover {
+    background: #9F7859;
+}
+
+/* Mobile and tablet */
+@media (max-width: 850px) {
+    .gallery-page .gl-hero {
+        padding: 75px 0 71px;
+    }
+
+    .gallery-page .gl-feature {
+        padding-top: 72px;
+    }
+
+    .gallery-page .gl-feature-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-page .gl-feature-image {
+        min-height: 430px;
+    }
+
+    .gallery-page .gl-feature-copy {
+        padding: 36px 32px 40px;
+    }
+
+    .gallery-page .gl-journal {
+        padding-top: 83px;
+        padding-bottom: 75px;
+    }
+
+    .gallery-page .gl-section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .gallery-page .gl-section-heading>p {
+        max-width: 620px;
+    }
+
+    .gallery-page .gl-grid {
+        columns: 2 220px;
+    }
+
+    .gallery-page .gl-end {
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 560px) {
+    .gallery-page .gl-container {
+        width: calc(100% - 32px);
+    }
+
+    .gallery-page .gl-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2.6px;
+    }
+
+    .gallery-page .gl-hero {
+        padding: 63px 0 64px;
+    }
+
+    .gallery-page .gl-hero h1 {
+        font-size: clamp(43px, 10.9vw, 56px);
+        letter-spacing: -1.3px;
+        margin: 20px 0 24px;
+    }
+
+    .gallery-page .gl-hero-copy {
+        font-size: 16px;
+        line-height: 1.85;
+    }
+
+    .gallery-page .gl-feature {
+        padding-top: 67px;
+    }
+
+    .gallery-page .gl-feature-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .gallery-page .gl-feature-panel {
+        border-radius: 18px;
+    }
+
+    .gallery-page .gl-feature-image {
+        min-height: 370px;
+    }
+
+    .gallery-page .gl-feature-copy {
+        padding: 30px 23px 34px;
+    }
+
+    .gallery-page .gl-feature-copy h2 {
+        font-size: 37px;
+    }
+
+    .gallery-page .gl-journal {
+        padding-top: 75px;
+    }
+
+    .gallery-page .gl-section-heading h2 {
+        font-size: 37px;
+    }
+
+    .gallery-page .gl-filters {
+        gap: 8px;
+        margin-bottom: 23px;
+    }
+
+    .gallery-page .gl-filters label {
+        padding: 8px 13px;
+        min-height: 38px;
+        font-size: 12px;
+    }
+
+    .gallery-page .gl-grid {
+        columns: 1;
+    }
+
+    .gallery-page .gl-tile {
+        margin-bottom: 17px;
+    }
+
+    .gallery-page .gl-caption strong {
+        font-size: 23px;
+    }
+
+    .gallery-page .gl-end {
+        padding: 35px 24px;
+        margin-bottom: 70px;
+    }
+
+    .gallery-page .gl-actions {
+        flex-direction: column;
+    }
+
+    .gallery-page .gl-button {
+        width: 100%;
+    }
+
+    .gallery-page .gl-lightbox {
+        padding: 13px;
+    }
+
+    .gallery-page .gl-lightbox-frame {
+        max-height: calc(100dvh - 26px);
+    }
+
+    .gallery-page .gl-lightbox-frame img {
+        max-height: calc(100dvh - 140px);
+    }
+
+    .gallery-page .gl-lightbox-frame figcaption {
+        padding: 13px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .gallery-page *,
+    .gallery-page *::before,
+    .gallery-page *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* ===========================================================
+   GALLERY V2 ADDITIONS — 20 NEW PHOTOS
+   Dedicated Childhood Memories and Birthday Tradition sections.
+   Existing gallery styles, lightboxes, videos, and filters unchanged.
+   =========================================================== */
+.gallery-page .gl-chapter {
+    padding-top: 86px;
+}
+
+.gallery-page .gl-chapter-heading {
+    margin-bottom: 30px;
+}
+
+.gallery-page .gl-chapter-heading h2 {
+    max-width: 800px;
+}
+
+.gallery-page .gl-chapter-heading>p {
+    max-width: 360px;
+}
+
+.gallery-page .gl-story-grid,
+.gallery-page .gl-year-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gallery-page .gl-story-card,
+.gallery-page .gl-year-card {
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    background: #292622;
+    border: 1px solid var(--gl-border);
+    border-radius: 18px;
+    transition: transform .25s, border-color .25s;
+}
+
+.gallery-page .gl-story-card:hover,
+.gallery-page .gl-year-card:hover {
+    transform: translateY(-4px);
+    border-color: #B99372;
+}
+
+.gallery-page .gl-story-image,
+.gallery-page .gl-year-image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4 / 3.5;
+    background: #191817;
+}
+
+.gallery-page .gl-story-card--portrait .gl-story-image {
+    aspect-ratio: 4 / 4.25;
+}
+
+.gallery-page .gl-story-image img,
+.gallery-page .gl-year-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.gallery-page .gl-story-card:hover img,
+.gallery-page .gl-year-card:hover img {
+    transform: scale(1.03);
+}
+
+.gallery-page .gl-story-caption {
+    padding: 22px 22px 24px;
+}
+
+.gallery-page .gl-story-caption strong {
+    display: block;
+    font: 26px/1.2 Georgia, serif;
+    color: var(--gl-cream);
+}
+
+.gallery-page .gl-story-caption p {
+    color: var(--gl-muted);
+    font-size: 13px;
+    line-height: 1.75;
+    margin: 10px 0 0;
+}
+
+.gallery-page .gl-birthday {
+    padding-top: 108px;
+}
+
+.gallery-page .gl-birthday-intro {
+    margin: 0 0 23px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-left: 2px solid var(--gl-accent);
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #2C2824, transparent);
+}
+
+.gallery-page .gl-birthday-mark {
+    color: var(--gl-accent);
+    font-size: 22px;
+    line-height: 1;
+}
+
+.gallery-page .gl-birthday-intro p {
+    margin: 0;
+    color: var(--gl-copy);
+    font: italic 17px/1.6 Georgia, serif;
+}
+
+.gallery-page .gl-year-image {
+    aspect-ratio: 4 / 3.8;
+}
+
+.gallery-page .gl-year-card--collage .gl-year-image img {
+    object-fit: contain;
+}
+
+.gallery-page .gl-year-card figcaption {
+    padding: 20px 21px 23px;
+}
+
+.gallery-page .gl-year-card figcaption>span {
+    display: inline-block;
+    color: var(--gl-accent);
+    font: bold 11px Arial, sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.gallery-page .gl-year-card figcaption strong {
+    display: block;
+    color: var(--gl-cream);
+    font: 25px/1.2 Georgia, serif;
+}
+
+.gallery-page .gl-year-card figcaption p {
+    color: var(--gl-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 9px 0 0;
+}
+
+.gallery-page .gl-birthday+.gl-journal {
+    padding-top: 118px;
+}
+
+/* Easy in-page jump navigation; independent of global header styling. */
+.gallery-page .gl-jump-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 29px;
+}
+
+.gallery-page .gl-jump-links a {
+    color: var(--gl-copy);
+    text-decoration: none;
+    font-size: 12px;
+    border: 1px solid var(--gl-border);
+    padding: 9px 13px;
+    border-radius: 999px;
+    transition: border-color .2s, color .2s;
+}
+
+.gallery-page .gl-jump-links a:hover {
+    color: var(--gl-cream);
+    border-color: var(--gl-accent);
+}
+
+@media(max-width:850px) {
+
+    .gallery-page .gl-story-grid,
+    .gallery-page .gl-year-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-page .gl-chapter {
+        padding-top: 75px;
+    }
+
+    .gallery-page .gl-birthday {
+        padding-top: 90px;
+    }
+}
+
+@media(max-width:560px) {
+
+    .gallery-page .gl-story-grid,
+    .gallery-page .gl-year-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .gallery-page .gl-chapter {
+        padding-top: 70px;
+    }
+
+    .gallery-page .gl-birthday {
+        padding-top: 77px;
+    }
+
+    .gallery-page .gl-story-card--portrait .gl-story-image,
+    .gallery-page .gl-story-image {
+        aspect-ratio: 4 / 3.2;
+    }
+
+    .gallery-page .gl-year-image {
+        aspect-ratio: 4 / 3.5;
+    }
+
+    .gallery-page .gl-year-card--collage .gl-year-image {
+        aspect-ratio: 4 / 4.1;
+    }
+
+    .gallery-page .gl-story-caption,
+    .gallery-page .gl-year-card figcaption {
+        padding: 18px;
+    }
+
+    .gallery-page .gl-story-caption strong,
+    .gallery-page .gl-year-card figcaption strong {
+        font-size: 23px;
+    }
+
+    .gallery-page .gl-birthday-intro p {
+        font-size: 15px;
+    }
+
+    .gallery-page .gl-birthday+.gl-journal {
+        padding-top: 78px;
+    }
+}

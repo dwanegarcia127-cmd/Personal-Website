@@ -1,0 +1,805 @@
+/* Favorites page – D2 dark minimalist theme (scoped to avoid changing other pages) */
+.favorites-page {
+  margin: 0;
+  background: #1C1C1A;
+  /* Header and footer inherit typography/colors from css/style.css. */
+}
+
+.favorites-page .fv-page *,
+.favorites-page .fv-page *::before,
+.favorites-page .fv-page *::after {
+  box-sizing: border-box;
+}
+
+.favorites-page .fv-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.favorites-page .fv-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.favorites-page .fv-container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.favorites-page .fv-page {
+  overflow: hidden;
+  color: #F2EDE5;
+  font: 16px/1.7 Arial, Helvetica, sans-serif;
+}
+
+.favorites-page .fv-eyebrow {
+  margin: 0 0 22px;
+  font: 700 12px/1.5 Arial, sans-serif;
+  letter-spacing: 3px;
+  color: #D4A47E;
+}
+
+.favorites-page .fv-page h1,
+.favorites-page .fv-page h2,
+.favorites-page .fv-page h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  line-height: 1.14;
+}
+
+.favorites-page .fv-page h1 {
+  font-size: clamp(52px, 6.1vw, 104px);
+  letter-spacing: -.035em;
+}
+
+.favorites-page .fv-page h2 {
+  font-size: clamp(36px, 4.25vw, 61px);
+  letter-spacing: -.03em;
+}
+
+.favorites-page .fv-page h2 em,
+.favorites-page .fv-page h1 span,
+.favorites-page .fv-next h2 em {
+  font-style: normal;
+  color: #CDA786;
+}
+
+.favorites-page .fv-page p {
+  color: #D4C7BC;
+}
+
+.favorites-page .fv-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(370px, .82fr);
+  gap: 40px;
+  align-items: center;
+  padding-block: 110px 85px;
+  border-bottom: 1px solid #3b3430;
+}
+
+.favorites-page .fv-hero-text>p:not(.fv-eyebrow) {
+  font-size: 18px;
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 30px 0 40px;
+}
+
+.favorites-page .fv-text-link {
+  display: inline-flex;
+  gap: 22px;
+  align-items: center;
+  border-bottom: 1px solid #CDA786;
+  padding-bottom: 9px;
+  color: #D4A47E;
+}
+
+.favorites-page .fv-vinyl-wrap {
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.favorites-page .fv-vinyl {
+  width: min(370px, 80%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: repeating-radial-gradient(circle, #25221f 0px, #25221f 3px, #34302c 4px, #25221f 6px, #171615 8px);
+  box-shadow: 0 22px 55px #0009, inset 0 0 0 2px #48413c;
+}
+
+.favorites-page .fv-vinyl-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 39%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #CDA786;
+  color: #211c19;
+  font: 9px/2 Georgia, serif;
+  letter-spacing: 2px;
+  transform: rotate(-9deg);
+}
+
+.favorites-page .fv-vinyl-label strong {
+  font-size: 15px;
+  letter-spacing: .6px;
+}
+
+.favorites-page .fv-vinyl-tag {
+  background: #2c2622;
+  border: 1px solid #514338;
+  color: #E8B789;
+  padding: 9px 16px;
+  position: absolute;
+  border-radius: 35px;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.favorites-page .tag-play {
+  left: 3%;
+  top: 9%;
+}
+
+.favorites-page .tag-listen {
+  right: 0;
+  top: 22%;
+}
+
+.favorites-page .tag-read {
+  left: 2%;
+  bottom: 16%;
+}
+
+.favorites-page .tag-crave {
+  right: 3%;
+  bottom: 10%;
+}
+
+.favorites-page .fv-section {
+  padding-block: 95px 14px;
+  scroll-margin-top: 36px;
+}
+
+.favorites-page .fv-section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  margin-bottom: 34px;
+}
+
+.favorites-page .fv-section-head>div {
+  max-width: 880px;
+}
+
+.favorites-page .fv-section-head>p {
+  flex: 0 0 290px;
+  margin: 0 0 7px;
+  color: #B7AAA0;
+}
+
+.favorites-page .fv-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.favorites-page .fv-overview-card {
+  position: relative;
+  min-height: 285px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 36px;
+  border-radius: 23px;
+  background: linear-gradient(140deg, #302823, #252321);
+  border: 1px solid #433a33;
+  transition: transform .25s, border-color .25s;
+}
+
+.favorites-page .fv-overview-card:hover {
+  transform: translateY(-6px);
+  border-color: #8d7058;
+}
+
+.favorites-page .fv-overview-card>span {
+  position: absolute;
+  left: 36px;
+  top: 32px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #D4A47E;
+}
+
+.favorites-page .fv-overview-card>b {
+  position: absolute;
+  right: 34px;
+  top: 23px;
+  font-size: 43px;
+  color: #CDA786;
+  font-weight: 400;
+}
+
+.favorites-page .fv-overview-card h3 {
+  font-size: 36px;
+}
+
+.favorites-page .fv-overview-card p {
+  max-width: 420px;
+  margin: 12px 0 16px;
+}
+
+.favorites-page .fv-overview-card small {
+  color: #D4A47E;
+  font-size: 14px;
+}
+
+.favorites-page .fv-games-grid,
+.favorites-page .fv-food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.favorites-page .fv-game-card {
+  background: #2A2623;
+  border: 1px solid #453A32;
+  border-radius: 21px;
+  padding: 25px 27px 30px;
+  min-height: 380px;
+  transition: transform .2s, border-color .2s;
+}
+
+.favorites-page .fv-game-card:hover {
+  transform: translateY(-5px);
+  border-color: #9b7d65;
+}
+
+.favorites-page .fv-game-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #CDA786;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+}
+
+.favorites-page .fv-mini-arrow {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.favorites-page .fv-game-art {
+  margin: 27px auto 23px;
+  width: 122px;
+  height: 122px;
+  background: #201d1b;
+  border: 1px solid #413b35;
+  border-radius: 28px;
+  padding: 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.favorites-page .fv-game-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 17px;
+}
+
+.favorites-page .fv-game-card h3 {
+  font-size: 31px;
+}
+
+.favorites-page .fv-game-card p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.favorites-page .fv-songs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.favorites-page .fv-song-card {
+  position: relative;
+  min-height: 412px;
+  overflow: hidden;
+  border-radius: 22px;
+  padding: 26px;
+  border: 1px solid #453b33;
+  background: radial-gradient(circle at 80% 0%, #4c3830, #292522 56%);
+}
+
+.favorites-page .fv-song-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorites-page .fv-song-graphic {
+  font: 38px Georgia, serif;
+  color: #CDA786;
+}
+
+.favorites-page .fv-song-genre {
+  color: #D4A47E;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.favorites-page .fv-song-info h3 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.favorites-page .fv-song-info p {
+  font-size: 15px;
+  margin: 8px 0 16px;
+}
+
+.favorites-page .fv-song-toggle {
+  cursor: pointer;
+  border: 1px solid #6b5747;
+  background: #312923;
+  color: #F2EDE5;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.favorites-page .fv-song-toggle:hover {
+  background: #5b4334;
+}
+
+.favorites-page .fv-song-player {
+  position: absolute;
+  bottom: 16px;
+  left: 18px;
+  right: 18px;
+  opacity: 0;
+  transform: translateY(110%);
+  transition: opacity .35s, transform .35s;
+  pointer-events: none;
+}
+
+.favorites-page .fv-song-card:hover .fv-song-player,
+.favorites-page .fv-song-card:focus-within .fv-song-player,
+.favorites-page .fv-song-card.is-open .fv-song-player {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.favorites-page .fv-song-player iframe {
+  display: block;
+  border: 0;
+}
+
+.favorites-page .fv-quote {
+  font: italic 24px/1.5 Georgia, serif;
+  border-left: 3px solid #CDA786;
+  background: #2c2622;
+  margin: 22px 0 0;
+  padding: 22px 28px;
+  color: #D4A47E;
+}
+
+.favorites-page .fv-stories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.favorites-page .fv-story-card {
+  overflow: hidden;
+  border-radius: 19px;
+  border: 1px solid #43372f;
+  background: #292522;
+  transition: transform .25s;
+}
+
+.favorites-page .fv-story-card:hover {
+  transform: translateY(-5px);
+}
+
+.favorites-page .fv-cover {
+  aspect-ratio: 2/3;
+  overflow: hidden;
+  background: #42362f;
+}
+
+.favorites-page .fv-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .35s;
+}
+
+.favorites-page .fv-story-card:hover .fv-cover img {
+  transform: scale(1.04);
+}
+
+.favorites-page .fv-story-copy {
+  padding: 18px 16px 22px;
+}
+
+.favorites-page .fv-story-copy .fv-eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+}
+
+.favorites-page .fv-story-copy h3 {
+  font-size: 23px;
+}
+
+.favorites-page .fv-story-copy p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 12px 0 0;
+}
+
+.favorites-page .fv-food-card {
+  background: linear-gradient(#362d26, #28231f);
+  border: 1px solid #463b33;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.favorites-page .fv-food-art {
+  height: 250px;
+  background: radial-gradient(circle, #605044, #29231f 65%);
+  display: grid;
+  place-items: center;
+  padding: 14px;
+}
+
+.favorites-page .fv-food-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 13px #0007);
+  transition: transform .25s;
+}
+
+.favorites-page .fv-food-card:hover img {
+  transform: scale(1.06);
+}
+
+.favorites-page .fv-food-details {
+  padding: 18px 23px 22px;
+}
+
+.favorites-page .fv-food-details .fv-eyebrow {
+  letter-spacing: 1.5px;
+  font-size: 10px;
+  margin: 0 0 10px;
+}
+
+.favorites-page .fv-food-details h3 {
+  font-size: 29px;
+}
+
+.favorites-page .fv-food-details p {
+  font-size: 14px;
+  margin: 12px 0 0;
+}
+
+.favorites-page .fv-next {
+  margin-top: 110px;
+  margin-bottom: 110px;
+  padding: 70px;
+  border-radius: 24px;
+  border: 1px solid #4d3e33;
+  background: linear-gradient(110deg, #382d28, #262321);
+}
+
+.favorites-page .fv-next h2 {
+  font-size: clamp(36px, 4.5vw, 60px);
+}
+
+.favorites-page .fv-next>p:not(.fv-eyebrow) {
+  max-width: 730px;
+  font-size: 18px;
+  margin: 28px 0 34px;
+}
+
+.favorites-page .fv-next-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.favorites-page .fv-next-links a {
+  border: 1px solid #7e624e;
+  border-radius: 10px;
+  padding: 15px 23px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.favorites-page .fv-next-links a:first-child {
+  background: #a77c5c;
+  border-color: #a77c5c;
+}
+
+.favorites-page .fv-next-links a:hover {
+  background: #6d5140;
+}
+
+@media (max-width:1000px) {
+  .favorites-page .fv-hero {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 65px;
+  }
+
+  .favorites-page .fv-vinyl-wrap {
+    min-height: 390px;
+  }
+
+  .favorites-page .fv-vinyl {
+    width: 320px;
+  }
+
+  .favorites-page .fv-games-grid,
+  .favorites-page .fv-food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .favorites-page .fv-stories-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .favorites-page .fv-section-head {
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .favorites-page .fv-section-head>p {
+    flex: auto;
+    max-width: 600px;
+  }
+}
+
+@media (max-width:640px) {
+
+  .favorites-page .fv-container {
+    width: calc(100% - 32px);
+  }
+
+  .favorites-page .fv-hero {
+    padding: 70px 0 54px;
+  }
+
+  .favorites-page .fv-hero-text>p:not(.fv-eyebrow) {
+    font-size: 16px;
+  }
+
+  .favorites-page .fv-vinyl-wrap {
+    min-height: 340px;
+  }
+
+  .favorites-page .fv-vinyl {
+    width: 260px;
+  }
+
+  .favorites-page .fv-vinyl-tag {
+    padding: 6px 9px;
+    font-size: 9px;
+  }
+
+  .favorites-page .fv-vinyl-label strong {
+    font-size: 12px;
+  }
+
+  .favorites-page .fv-section {
+    padding-top: 64px;
+  }
+
+  .favorites-page .fv-section-head {
+    margin-bottom: 25px;
+  }
+
+  .favorites-page .fv-overview-grid,
+  .favorites-page .fv-games-grid,
+  .favorites-page .fv-songs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-page .fv-overview-card {
+    min-height: 250px;
+    padding: 28px;
+  }
+
+  .favorites-page .fv-overview-card h3 {
+    font-size: 30px;
+  }
+
+  .favorites-page .fv-games-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .favorites-page .fv-game-card {
+    padding: 18px 14px;
+    min-height: 335px;
+  }
+
+  .favorites-page .fv-game-art {
+    width: 85px;
+    height: 85px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .favorites-page .fv-game-card h3 {
+    font-size: 23px;
+  }
+
+  .favorites-page .fv-game-card p {
+    font-size: 12px;
+  }
+
+  .favorites-page .fv-game-top {
+    font-size: 9px;
+  }
+
+  .favorites-page .fv-story-copy h3 {
+    font-size: 21px;
+  }
+
+  .favorites-page .fv-stories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .favorites-page .fv-story-copy {
+    padding: 15px 12px 18px;
+  }
+
+  .favorites-page .fv-story-copy p {
+    font-size: 12px;
+  }
+
+  .favorites-page .fv-food-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .favorites-page .fv-food-art {
+    height: 160px;
+  }
+
+  .favorites-page .fv-food-details {
+    padding: 14px;
+  }
+
+  .favorites-page .fv-food-details h3 {
+    font-size: 23px;
+  }
+
+  .favorites-page .fv-food-details p {
+    font-size: 12px;
+  }
+
+  .favorites-page .fv-song-card {
+    min-height: 412px;
+  }
+
+  .favorites-page .fv-quote {
+    font-size: 18px;
+  }
+
+  .favorites-page .fv-next {
+    padding: 32px 24px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+
+  .favorites-page .fv-next-links {
+    flex-direction: column;
+  }
+}
+
+@media (hover:none) {
+  .favorites-page .fv-song-card .fv-song-player {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .favorites-page .fv-song-card.is-open .fv-song-player {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .favorites-page * {
+    transition: none !important;
+  }
+}
+
+/* VINYL INTERACTION — spin only the disc, keep the four labels fixed. */
+.favorites-page .fv-vinyl {
+  flex: 0 0 auto;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.favorites-page .fv-vinyl:hover {
+  animation: fv-record-spin 4s linear infinite;
+}
+
+@keyframes fv-record-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.favorites-page .fv-vinyl-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.favorites-page .fv-vinyl-tag:hover,
+.favorites-page .fv-vinyl-tag:focus-visible {
+  background: #49372D;
+  border-color: #CDA786;
+  color: #F2EDE5;
+  transform: translateY(-2px);
+}
+
+.favorites-page .fv-vinyl-tag:focus-visible {
+  outline: 2px solid #CDA786;
+  outline-offset: 4px;
+}
+
+html { scroll-behavior: smooth; }
+
+.favorites-page #fv-games,
+.favorites-page #fv-music,
+.favorites-page #fv-stories,
+.favorites-page #fv-food {
+  scroll-margin-top: 35px;
+}
+
+/* Touch devices cannot hover reliably: show Spotify controls at rest. */
+@media (hover: none) {
+  .favorites-page .fv-song-card .fv-song-player {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .favorites-page .fv-vinyl:hover { animation: none; }
+}

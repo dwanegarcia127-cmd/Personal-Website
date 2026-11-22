@@ -1,0 +1,348 @@
+/* =========================================================
+   PAGE 6 / DREAMS — D2 DARK MINIMALIST
+   Deliberately SCOPED TO <main class="dreams-page">.
+   The shared style.css owns header, navigation, footer, and body.
+   ========================================================= */
+.dreams-page {
+    --dr-bg: #1C1C1A;
+    --dr-cream: #F2EDE5;
+    --dr-beige: #CDA786;
+    --dr-muted: #C9BDB2;
+    --dr-dim: #AB9E93;
+    --dr-border: #494039;
+    color: var(--dr-cream);
+    background: var(--dr-bg);
+    font: 16px/1.75 Arial, Helvetica, sans-serif;
+    overflow-x: clip;
+}
+.dreams-page *, .dreams-page *::before, .dreams-page *::after { box-sizing: border-box; }
+.dreams-page .dr-container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.dreams-page h1, .dreams-page h2, .dreams-page h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; margin: 0; line-height: 1.14; }
+.dreams-page h1 span, .dreams-page h2 em { color: var(--dr-beige); font-style: normal; }
+.dreams-page p { margin: 0; }
+.dreams-page a { text-decoration: none; }
+.dreams-page .dr-eyebrow { margin: 0 0 24px; color: #D4A47E; font: 700 12px/1.6 Arial, sans-serif; letter-spacing: 3px; }
+.dreams-page .dr-section { padding: 92px 0 0; scroll-margin-top: 40px; }
+.dreams-page .dr-section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 48px; margin-bottom: 34px; }
+.dreams-page .dr-section-heading > div { min-width: 0; max-width: 820px; }
+.dreams-page .dr-section-heading h2 { font-size: clamp(36px, 4.25vw, 58px); letter-spacing: -.035em; }
+.dreams-page .dr-section-heading > p { color: var(--dr-muted); max-width: 310px; flex: 0 0 310px; font-size: 15px; line-height: 1.85; }
+
+/* HERO */
+.dreams-page .dr-hero { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: center; gap: 70px; padding-top: 112px; padding-bottom: 104px; border-bottom: 1px solid #39332D; }
+.dreams-page .dr-hero h1 { font-size: clamp(59px, 6.8vw, 92px); letter-spacing: -.05em; max-width: 600px; margin-bottom: 26px; }
+.dreams-page .dr-hero h1 span { display: block; }
+.dreams-page .dr-hero-lead { max-width: 600px; color: var(--dr-cream); font: italic clamp(20px, 2.2vw, 27px)/1.55 Georgia, serif; margin-bottom: 19px; }
+.dreams-page .dr-hero-description { max-width: 610px; color: var(--dr-muted); font-size: 16px; line-height: 1.95; }
+.dreams-page .dr-discover { display: inline-flex; align-items: center; gap: 24px; margin-top: 36px; padding-bottom: 9px; color: var(--dr-beige); border-bottom: 1px solid var(--dr-beige); font-size: 14px; transition: gap .25s; }
+.dreams-page .dr-discover:hover { gap: 34px; }
+.dreams-page .dr-hero-art { position: relative; min-height: 460px; overflow: hidden; padding: 28px; border-radius: 23px; background: radial-gradient(circle at 52% 42%, #42362D 0, #2B2723 43%, #24211F 92%); border: 1px solid #5A4839; display: flex; flex-direction: column; justify-content: space-between; isolation: isolate; }
+.dreams-page .dr-hero-art::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(#CDA7860C 1px, transparent 1px), linear-gradient(90deg,#CDA7860C 1px,transparent 1px); background-size: 28px 28px; pointer-events: none; z-index: -1; }
+.dreams-page .dr-art-topline, .dreams-page .dr-art-steps { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 8px; color: var(--dr-beige); font-size: 10px; font-weight: 700; letter-spacing: 1.6px; }
+.dreams-page .dr-art-topline span:last-child { font-size: 23px; line-height: .8; }
+.dreams-page .dr-art-orbit { position: absolute; left: 50%; top: 45%; transform: translate(-50%,-50%); width: min(78%, 300px); aspect-ratio: 1; display: grid; place-items: center; }
+/* Two independently rotating paths. The dots are children of the paths,
+   so each dot travels along the corresponding circle (the D. stays still). */
+.dreams-page .dr-orbit-track { position: absolute; aspect-ratio: 1; transform-origin: 50% 50%; border-radius: 50%; }
+.dreams-page .dr-orbit-track-a { inset: 0; animation: dr-orbit-clockwise 18s linear infinite; }
+.dreams-page .dr-orbit-track-b { width: 72%; left: 14%; top: 14%; animation: dr-orbit-counterclockwise 12s linear infinite; }
+.dreams-page .dr-orbit-ring { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 50%; border: 1px solid #CDA78666; }
+.dreams-page .dr-orbit-ring-a { border-top-color: #E4C3A2; border-left-color: #CDA78675; }
+.dreams-page .dr-orbit-ring-b { border-color: #CDA78644; border-bottom-color: #D3A785; }
+.dreams-page .dr-orbit-core { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; width: 48%; aspect-ratio: 1; background: #CDA786; color: #241C18; border-radius: 50%; font: 62px/1 Georgia, serif; box-shadow: 0 0 75px #CDA78618; }
+.dreams-page .dr-orbit-core span { color: #795338; }
+.dreams-page .dr-orbit-point { position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--dr-beige); box-shadow: 0 0 18px #CDA78688; z-index: 1; }
+.dreams-page .point-a { left: 50%; top: 0; transform: translate(-50%, -50%); }
+.dreams-page .point-b { left: 50%; bottom: 0; transform: translate(-50%, 50%); width: 8px; height: 8px; }
+@keyframes dr-orbit-clockwise { to { transform: rotate(360deg); } }
+@keyframes dr-orbit-counterclockwise { to { transform: rotate(-360deg); } }
+.dreams-page .dr-art-steps { margin-top: auto; padding-top: 350px; }
+.dreams-page .dr-art-steps a { position: relative; z-index: 3; color: var(--dr-beige); text-decoration: none; display: inline-block; white-space: nowrap; transition: color .2s, transform .2s; }
+.dreams-page .dr-art-steps a:hover, .dreams-page .dr-art-steps a:focus-visible { color: var(--dr-cream); transform: translateY(-3px); }
+.dreams-page .dr-art-steps a:focus-visible { outline: 2px solid #E4C3A2; outline-offset: 6px; border-radius: 3px; }
+.dreams-page .dr-art-note { color: #AFA199; border-top: 1px solid #675142; margin-top: 16px; padding-top: 16px; font-size: 10px; letter-spacing: 1.45px; }
+
+/* 01 — THE PATH */
+.dreams-page .dr-story-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: stretch; }
+.dreams-page .dr-story-text { padding: 37px 40px; background: #282522; border: 1px solid var(--dr-border); border-radius: 20px; }
+.dreams-page .dr-story-text p { color: #D1C6BA; font-size: 16px; line-height: 1.95; margin-bottom: 19px; }
+.dreams-page .dr-story-text p:last-child { margin-bottom: 0; }
+.dreams-page .dr-story-text strong { color: var(--dr-cream); font-weight: 700; }
+.dreams-page .dr-story-note { min-height: 390px; padding: 37px; border-radius: 20px; border: 1px solid #6A4D3D; background: linear-gradient(135deg, #3B2D26, #272321); display: flex; flex-direction: column; justify-content: center; }
+.dreams-page .dr-note-top { color: var(--dr-beige); font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.dreams-page .dr-story-note blockquote { font: italic clamp(39px, 4vw, 57px)/1.2 Georgia, serif; color: var(--dr-cream); margin: 36px 0 23px; }
+.dreams-page .dr-story-note > p:nth-of-type(2) { color: #CDBAAA; font-size: 15px; }
+.dreams-page .dr-note-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; color: #D5A980; font-size: 10px; letter-spacing: 1.8px; margin-top: 50px; border-top: 1px solid #654D40; padding-top: 18px; }
+
+/* 02 — SKILLS */
+.dreams-page .dr-skills-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.dreams-page .dr-skill-card { display: flex; flex-direction: column; min-height: 335px; padding: 25px 24px 24px; background: #2A2623; border: 1px solid var(--dr-border); border-radius: 19px; transition: transform .25s, border-color .25s; }
+.dreams-page .dr-skill-card:hover { transform: translateY(-5px); border-color: #B28B6B; }
+.dreams-page .dr-skill-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; color: var(--dr-beige); font-size: 10px; letter-spacing: 1.7px; font-weight: 700; margin-bottom: 47px; }
+.dreams-page .dr-skill-glyph { font: 24px/1 Georgia, serif; letter-spacing: 0; }
+.dreams-page .dr-skill-card h3 { font-size: 25px; margin-bottom: 14px; }
+.dreams-page .dr-skill-card p { color: var(--dr-muted); font-size: 13px; line-height: 1.75; }
+.dreams-page .dr-skill-status { margin-top: auto; padding-top: 21px; color: var(--dr-beige); font-size: 10px; letter-spacing: 1.35px; font-weight: 700; }
+
+/* 03 — ROADMAP */
+.dreams-page .dr-roadmap-list { padding: 5px 0; }
+.dreams-page .dr-roadmap-item { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 24px; }
+.dreams-page .dr-roadmap-marker { position: relative; display: flex; justify-content: center; padding-top: 21px; }
+.dreams-page .dr-roadmap-marker::after { content: ''; position: absolute; top: 74px; bottom: 0; width: 1px; background: #6B5544; }
+.dreams-page .dr-roadmap-item:last-child .dr-roadmap-marker::after { display: none; }
+.dreams-page .dr-roadmap-marker span { display: grid; place-items: center; position: relative; z-index: 1; width: 52px; height: 52px; flex: 0 0 52px; border-radius: 50%; background: #2C2622; border: 1px solid #CDA786; font: 19px Georgia, serif; color: var(--dr-beige); }
+.dreams-page .dr-roadmap-content { background: #282421; border: 1px solid var(--dr-border); padding: 27px 30px 30px; border-radius: 17px; margin-bottom: 16px; transition: transform .25s, border-color .25s; }
+.dreams-page .dr-roadmap-content:hover { transform: translateX(4px); border-color: #A48366; }
+.dreams-page .dr-roadmap-phase { color: #D4A47E; font-size: 11px; font-weight: 700; letter-spacing: 2px; }
+.dreams-page .dr-roadmap-content h3 { font-size: clamp(24px, 2.7vw, 31px); margin: 11px 0 12px; }
+.dreams-page .dr-roadmap-content p { color: var(--dr-muted); font-size: 14px; line-height: 1.8; max-width: 875px; }
+
+/* 04 — BEYOND CAREER */
+.dreams-page .dr-beyond-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.dreams-page .dr-beyond-card { min-height: 300px; padding: 29px 30px; display: flex; flex-direction: column; border-radius: 19px; background: linear-gradient(145deg, #302924, #252220); border: 1px solid #554338; transition: transform .25s, border-color .25s; }
+.dreams-page .dr-beyond-card:hover { transform: translateY(-5px); border-color: #A48366; }
+.dreams-page .dr-beyond-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: #D4A47E; font-weight: 700; font-size: 10px; letter-spacing: 1.5px; }
+.dreams-page .dr-beyond-top span:last-child { font: 32px/1 Georgia, serif; }
+.dreams-page .dr-beyond-card h3 { font-size: 30px; margin: auto 0 13px; padding-top: 50px; }
+.dreams-page .dr-beyond-card p { color: var(--dr-muted); font-size: 14px; line-height: 1.75; }
+
+/* INTERACTIVE MILESTONES */
+.dreams-page .dr-checklist-card { padding: 32px 36px; border: 1px solid #5A4839; border-radius: 21px; background: linear-gradient(130deg,#332B26,#262321); }
+.dreams-page .dr-checklist-header { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+.dreams-page .dr-checklist-caption { color: var(--dr-beige); font-size: 11px; letter-spacing: 2px; font-weight: 700; }
+.dreams-page .dr-checklist-header p { color: var(--dr-cream); font: 28px Georgia, serif; margin-top: 8px; }
+.dreams-page .dr-checklist-counter { text-align: right; display: flex; align-items: baseline; flex-direction: column; }
+.dreams-page .dr-checklist-counter strong { color: var(--dr-cream); font: 32px Georgia, serif; }
+.dreams-page .dr-checklist-counter span { color: var(--dr-dim); font-size: 12px; }
+.dreams-page .dr-progress-track { height: 8px; margin-top: 23px; border-radius: 50px; overflow: hidden; background: #55473B; }
+.dreams-page #dr-progress-fill { height: 100%; width: 0; background: #CDA786; border-radius: 50px; transition: width .3s ease; }
+.dreams-page .dr-goal-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin-top: 25px; }
+.dreams-page .dr-goal-check { display: flex; align-items: center; gap: 13px; padding: 16px; background: #211F1C; border: 1px solid #544236; border-radius: 11px; cursor: pointer; color: var(--dr-cream); font-size: 14px; line-height: 1.5; }
+.dreams-page .dr-goal-check:hover { border-color: #A48366; }
+.dreams-page .dr-goal-check input { appearance: none; -webkit-appearance: none; width: 21px; height: 21px; flex: 0 0 21px; border-radius: 5px; border: 1px solid #94765F; background: #282321; margin: 0; display: grid; place-items: center; cursor: pointer; }
+.dreams-page .dr-goal-check input:checked { background: #CDA786; border-color: #CDA786; }
+.dreams-page .dr-goal-check input:checked::after { content: '✓'; color: #211B17; font-weight: 800; font-size: 15px; }
+.dreams-page .dr-goal-check input:checked + span { color: #B8AA9D; text-decoration: line-through; text-decoration-thickness: 1px; }
+.dreams-page .dr-goal-check input:focus-visible { outline: 2px solid var(--dr-cream); outline-offset: 3px; }
+.dreams-page .dr-checklist-footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 22px; }
+.dreams-page .dr-checklist-footer p { color: #B7A99C; font-size: 12px; line-height: 1.6; }
+.dreams-page #dr-reset { border: 1px solid #9B7B64; border-radius: 9px; background: transparent; color: #F2EDE5; padding: 10px 16px; cursor: pointer; font-size: 12px; white-space: nowrap; }
+.dreams-page #dr-reset:hover { background: #5A4333; }
+
+/* 05 — FUTURE LETTER */
+.dreams-page .dr-letter { padding-top: 105px; }
+.dreams-page .dr-letter-inner { padding: clamp(30px, 6vw, 72px); border-radius: 23px; border: 1px solid #6A503F; background: linear-gradient(135deg,#382C26 0%,#292320 58%,#211F1D 100%); }
+.dreams-page .dr-letter-top, .dreams-page .dr-letter-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; color: #D4A47E; font-size: 10px; font-weight: 700; letter-spacing: 1.8px; }
+.dreams-page .dr-letter-top { padding-bottom: 22px; border-bottom: 1px solid #654D3C; }
+.dreams-page .dr-letter h2 { max-width: 920px; font-size: clamp(40px, 4.7vw, 66px); margin: 33px 0 31px; letter-spacing: -.03em; }
+.dreams-page .dr-letter-body { max-width: 790px; }
+.dreams-page .dr-letter-body p { font: 17px/1.95 Georgia, serif; color: #DDD1C4; margin-bottom: 19px; }
+.dreams-page .dr-letter-signoff { padding-top: 15px; color: #EBD7C7 !important; }
+.dreams-page .dr-letter-signoff strong { font: italic 29px Georgia, serif; color: #DDB595; }
+.dreams-page .dr-letter-bottom { padding-top: 24px; margin-top: 32px; border-top: 1px solid #654D3C; }
+
+/* OUTRO */
+.dreams-page .dr-next { padding-top: 116px; padding-bottom: 112px; }
+.dreams-page .dr-next h2 { max-width: 850px; font-size: clamp(43px, 4.8vw, 64px); letter-spacing: -.03em; }
+.dreams-page .dr-next > p:not(.dr-eyebrow) { color: var(--dr-muted); font-size: 16px; max-width: 710px; margin-top: 19px; }
+.dreams-page .dr-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 30px; }
+.dreams-page .dr-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 26px; min-height: 54px; padding: 13px 22px; border: 1px solid #8D6D54; border-radius: 10px; font-size: 14px; font-weight: 700; transition: transform .25s, background .25s; }
+.dreams-page .dr-button:hover { transform: translateY(-3px); }
+.dreams-page .dr-button-primary { background: #9F7859; color: #fff; }
+.dreams-page .dr-button-outline { background: #292521; color: var(--dr-cream); }
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .dreams-page .dr-hero { grid-template-columns: 1fr; gap: 35px; padding-top: 75px; }
+    .dreams-page .dr-hero-art { max-width: 630px; width: 100%; min-height: 420px; }
+    .dreams-page .dr-section-heading { flex-direction: column; align-items: flex-start; gap: 14px; }
+    .dreams-page .dr-section-heading > p { max-width: 640px; flex: auto; }
+    .dreams-page .dr-skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .dreams-page .dr-beyond-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .dreams-page .dr-beyond-card:last-child { grid-column: auto; }
+}
+/* MOBILE */
+@media (max-width: 600px) {
+    .dreams-page .dr-container { width: calc(100% - 32px); }
+    .dreams-page .dr-hero { padding-top: 66px; padding-bottom: 67px; gap: 30px; }
+    .dreams-page .dr-eyebrow { font-size: 11px; letter-spacing: 2px; margin-bottom: 18px; }
+    .dreams-page .dr-hero h1 { font-size: clamp(48px, 12vw, 59px); }
+    .dreams-page .dr-hero-lead { font-size: 21px; }
+    .dreams-page .dr-hero-description { font-size: 15px; }
+    .dreams-page .dr-hero-art { min-height: 350px; padding: 20px; }
+    .dreams-page .dr-art-orbit { width: 220px; }
+    .dreams-page .dr-orbit-core { font-size: 48px; }
+    .dreams-page .dr-art-steps { padding-top: 267px; font-size: 9px; letter-spacing: .8px; }
+    .dreams-page .dr-art-topline { font-size: 9px; }
+    .dreams-page .dr-art-note { font-size: 9px; }
+    .dreams-page .dr-section { padding-top: 70px; }
+    .dreams-page .dr-section-heading { margin-bottom: 24px; }
+    .dreams-page .dr-section-heading h2 { font-size: clamp(35px, 9vw, 45px); }
+    .dreams-page .dr-section-heading > p { font-size: 14px; }
+    .dreams-page .dr-story-layout { grid-template-columns: 1fr; gap: 16px; }
+    .dreams-page .dr-story-text { padding: 25px 23px; }
+    .dreams-page .dr-story-text p { font-size: 14px; }
+    .dreams-page .dr-story-note { min-height: 295px; padding: 27px; }
+    .dreams-page .dr-story-note blockquote { font-size: 43px; }
+    .dreams-page .dr-skills-grid { grid-template-columns: 1fr; gap: 14px; }
+    .dreams-page .dr-skill-card { min-height: 270px; }
+    .dreams-page .dr-skill-top { margin-bottom: 25px; }
+    .dreams-page .dr-roadmap-item { grid-template-columns: 51px minmax(0,1fr); gap: 12px; }
+    .dreams-page .dr-roadmap-marker { padding-top: 19px; }
+    .dreams-page .dr-roadmap-marker span { width: 42px; height: 42px; flex-basis: 42px; font-size: 16px; }
+    .dreams-page .dr-roadmap-marker::after { top: 66px; }
+    .dreams-page .dr-roadmap-content { padding: 22px 19px; }
+    .dreams-page .dr-roadmap-content h3 { font-size: 24px; }
+    .dreams-page .dr-roadmap-content p { font-size: 13px; }
+    .dreams-page .dr-roadmap-phase { font-size: 9px; letter-spacing: 1.2px; }
+    .dreams-page .dr-beyond-grid { grid-template-columns: 1fr; gap: 14px; }
+    .dreams-page .dr-beyond-card { min-height: 230px; }
+    .dreams-page .dr-beyond-card:last-child { grid-column: auto; }
+    .dreams-page .dr-beyond-card h3 { padding-top: 40px; font-size: 27px; }
+    .dreams-page .dr-checklist-card { padding: 23px 19px; }
+    .dreams-page .dr-checklist-header p { font-size: 22px; }
+    .dreams-page .dr-checklist-counter strong { font-size: 26px; }
+    .dreams-page .dr-goal-list { grid-template-columns: 1fr; gap: 9px; }
+    .dreams-page .dr-checklist-footer { flex-direction: column; align-items: flex-start; }
+    .dreams-page .dr-letter { padding-top: 77px; }
+    .dreams-page .dr-letter-inner { padding: 29px 23px; }
+    .dreams-page .dr-letter h2 { font-size: clamp(35px, 9vw, 43px); }
+    .dreams-page .dr-letter-body p { font-size: 15px; }
+    .dreams-page .dr-letter-top, .dreams-page .dr-letter-bottom { font-size: 9px; }
+    .dreams-page .dr-next { padding-top: 79px; padding-bottom: 80px; }
+    .dreams-page .dr-next h2 { font-size: 40px; }
+    .dreams-page .dr-next > p:not(.dr-eyebrow) { font-size: 14px; }
+    .dreams-page .dr-actions { flex-direction: column; }
+    .dreams-page .dr-button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .dreams-page * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* Smooth in-page jump links. This file is loaded only on Dreams. */
+@media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+}
+
+
+/* ========================================
+   VERSION 3: FOUR CHAPTER LINKS + SKILL CARDS
+   ======================================== */
+.dreams-page .dr-art-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 5px;
+    text-align: center;
+}
+.dreams-page .dr-art-steps a {
+    padding: 10px 2px;
+    border-radius: 8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    background: rgba(26, 23, 21, .23);
+}
+.dreams-page .dr-art-steps a:hover,
+.dreams-page .dr-art-steps a:focus-visible {
+    background: #4A362B;
+    color: #FFF5EB;
+}
+/* New details-based cards: entire visible card can be clicked / tapped. */
+.dreams-page details.dr-skill-card {
+    padding: 0;
+    min-width: 0;
+    display: block;
+    overflow: hidden;
+}
+.dreams-page .dr-skill-card summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    min-height: 333px;
+    padding: 25px 24px 24px;
+    outline-offset: -5px;
+}
+.dreams-page .dr-skill-card summary::-webkit-details-marker { display: none; }
+.dreams-page .dr-skill-card summary::marker { content: ''; }
+.dreams-page .dr-skill-card .dr-skill-name {
+    color: var(--dr-cream);
+    font: 400 25px/1.18 Georgia, 'Times New Roman', serif;
+    margin-bottom: 14px;
+}
+.dreams-page .dr-skill-card .dr-skill-description {
+    color: var(--dr-muted);
+    font-size: 13px;
+    line-height: 1.75;
+    display: block;
+}
+.dreams-page .dr-skill-card .dr-skill-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+.dreams-page .dr-expand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #77604E;
+    border-radius: 50%;
+    font: 17px/1 Arial, sans-serif;
+    transition: transform .25s;
+}
+.dreams-page .dr-skill-card[open] .dr-expand-icon { transform: rotate(45deg); }
+.dreams-page .dr-skill-card[open] { border-color: #B18B70; }
+.dreams-page .dr-skill-expanded {
+    border-top: 1px solid #574538;
+    margin: 0 24px 22px;
+    padding-top: 18px;
+}
+.dreams-page .dr-skill-expanded strong {
+    color: #CDA786;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+.dreams-page .dr-skill-expanded p {
+    color: #D0C2B4;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 8px;
+}
+/* No sticky header: a small offset keeps section headings neatly visible. */
+.dreams-page .dr-section,
+.dreams-page #dr-letter { scroll-margin-top: 36px; }
+@media (max-width: 600px) {
+    .dreams-page .dr-art-steps { gap: 3px; }
+    .dreams-page .dr-art-steps a { font-size: 8px; letter-spacing: .3px; padding: 9px 0; }
+    .dreams-page .dr-skill-card summary { min-height: 268px; }
+    .dreams-page .dr-section,
+    .dreams-page #dr-letter { scroll-margin-top: 24px; }
+}
+
+/* =============================================
+   MOBILE QA POLISH: FOUR CHAPTER LINK BUTTONS
+   Bigger tap targets and legible labels at phone widths.
+   Desktop layout and orbit animations unchanged.
+   ============================================= */
+@media (max-width: 600px) {
+  .dreams-page .dr-art-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding-top: 305px;
+  }
+
+  .dreams-page .dr-art-steps a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 6px;
+    border: 1px solid #5A483966;
+    background: rgba(26, 23, 21, 0.4);
+    font-size: 11px;
+    letter-spacing: 0.65px;
+    white-space: nowrap;
+  }
+}
