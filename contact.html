@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1C1C1A">
+    <meta name="description" content="Say hello to Dwane. A little space for conversations about technology, creative projects, and shared interests.">
+    <title>Contact | Dwane's Portfolio</title>
+    <!-- Shared stylesheet FIRST to preserve the existing header and footer. -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+    <!-- ORIGINAL SHARED HEADER: not sticky, no new logo or branding -->
+    <header class="site-header">
+        <div class="header-container">
+            <a class="logo" href="index.html">Dwane<span>.</span></a>
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="hobbies.html">Hobbies</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="favorites.html">Favorites</a>
+                <a href="dreams.html">Dreams</a>
+                <a href="contact.html" class="active" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-page" id="top">
+        <!-- HERO -->
+        <section class="ct-hero ct-container" aria-labelledby="ct-heading">
+            <div class="ct-hero-text">
+                <p class="ct-eyebrow">06 / THE CONVERSATION STARTS HERE</p>
+                <h1 id="ct-heading">A little hello.<br><span>A new connection.</span></h1>
+                <p class="ct-lead">Whether it's about technology, a project, shared interests, or simply saying hi, I'm always happy to connect with people who stop by my little corner of the internet.</p>
+                <a class="ct-text-link" href="#ct-message">Leave me a message <span aria-hidden="true">↓</span></a>
+                <div class="ct-hero-chips" aria-label="Things we can talk about">
+                    <span>Technology</span><span>Creative projects</span><span>Anything interesting</span>
+                </div>
+            </div>
+            <div class="ct-letter-scene" aria-label="Decorative postcard from Dwane">
+                <div class="ct-letter-shadow" aria-hidden="true"></div>
+                <div class="ct-letter-card">
+                    <div class="ct-letter-top"><span>POSTCARD / 07</span><span class="ct-letter-spark" aria-hidden="true">✳</span></div>
+                    <div class="ct-letter-stamp" aria-hidden="true">D<span>.</span></div>
+                    <p class="ct-letter-small">TO / SOMEONE NEW</p>
+                    <p class="ct-letter-script">Hey there,<br><em>nice to meet you.</em></p>
+                    <div class="ct-letter-rule"></div>
+                    <p class="ct-letter-signoff">Every good conversation starts somewhere.</p>
+                    <div class="ct-letter-bottom"><span>FROM DWANE</span><span>✦ 2026</span></div>
+                </div>
+                <span class="ct-letter-float ct-letter-float-one" aria-hidden="true">HELLO ↗</span>
+                <span class="ct-letter-float ct-letter-float-two" aria-hidden="true">STAY CURIOUS ✳</span>
+            </div>
+        </section>
+
+        <!-- SOCIAL / CONTACT CHANNELS -->
+        <section class="ct-section ct-container" id="ct-connect" aria-labelledby="ct-connect-heading">
+            <div class="ct-section-head">
+                <div>
+                    <p class="ct-eyebrow">01 / FIND ME HERE</p>
+                    <h2 id="ct-connect-heading">Different ways to <em>reach out.</em></h2>
+                </div>
+                <p>Reach out through my socials, or choose my personal email for casual conversations and my school email for academic matters.</p>
+            </div>
+            <div class="ct-channel-grid">
+                <a class="ct-channel is-available" data-contact-link="email" href="mailto:dwanegarcia127@gmail.com">
+                    <div class="ct-channel-top"><span>01 / PERSONAL</span><span class="ct-channel-icon" aria-hidden="true">@</span></div>
+                    <div><h3>Personal Email</h3><p>dwanegarcia127@gmail.com</p></div>
+                    <span class="ct-channel-action">Write an email ↗</span>
+                </a>
+                <a class="ct-channel is-available" data-contact-link="institutionalEmail" href="mailto:0326-1502@lspu.edu.ph">
+                    <div class="ct-channel-top"><span>02 / ACADEMIC</span><span class="ct-channel-icon" aria-hidden="true">✉</span></div>
+                    <div><h3>School Email</h3><p>0326-1502@lspu.edu.ph</p></div>
+                    <span class="ct-channel-action">For school matters ↗</span>
+                </a>
+                <a class="ct-channel is-available" data-contact-link="github" href="https://github.com/dwanegarcia127-cmd" target="_blank" rel="noopener noreferrer">
+                    <div class="ct-channel-top"><span>03 / PROJECTS</span><span class="ct-channel-icon" aria-hidden="true">&lt;/&gt;</span></div>
+                    <div><h3>GitHub</h3><p>Code, projects, and things I'm building.</p></div>
+                    <span class="ct-channel-action">Visit my profile ↗</span>
+                </a>
+                <a class="ct-channel is-available" data-contact-link="linkedin" href="https://www.linkedin.com/in/dwane-garcia-96711342b/" target="_blank" rel="noopener noreferrer">
+                    <div class="ct-channel-top"><span>04 / NETWORK</span><span class="ct-channel-icon" aria-hidden="true">in.</span></div>
+                    <div><h3>LinkedIn</h3><p>Learning, skills, and professional growth.</p></div>
+                    <span class="ct-channel-action">Visit my profile ↗</span>
+                </a>
+                <a class="ct-channel is-available" data-contact-link="facebook" href="https://www.facebook.com/dwane.garcia.142311/" target="_blank" rel="noopener noreferrer">
+                    <div class="ct-channel-top"><span>05 / SOCIAL</span><span class="ct-channel-icon" aria-hidden="true">f.</span></div>
+                    <div><h3>Facebook</h3><p>Let's keep in touch.</p></div>
+                    <span class="ct-channel-action">Visit my profile ↗</span>
+                </a>
+                <a class="ct-channel is-available" data-contact-link="instagram" href="https://www.instagram.com/garciadwane/" target="_blank" rel="noopener noreferrer">
+                    <div class="ct-channel-top"><span>06 / MOMENTS</span><span class="ct-channel-icon" aria-hidden="true">◎</span></div>
+                    <div><h3>Instagram</h3><p>Photos, memories, and everyday moments.</p></div>
+                    <span class="ct-channel-action">Visit my profile ↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- MESSAGE -->
+        <section class="ct-section ct-container ct-message-section" id="ct-message" aria-labelledby="ct-message-heading">
+            <div class="ct-section-head">
+                <div>
+                    <p class="ct-eyebrow">02 / DROP A NOTE</p>
+                    <h2 id="ct-message-heading">Have something <em>to say?</em></h2>
+                </div>
+                <p>It doesn't have to be formal. A thoughtful message or a simple hello is enough.</p>
+            </div>
+            <div class="ct-message-grid">
+                <div class="ct-form-panel">
+                    <div class="ct-form-top"><span>NEW MESSAGE / 001</span><span class="ct-form-top-star" aria-hidden="true">✳</span></div>
+                    <form id="ct-contact-form" novalidate>
+                        <div class="ct-form-row">
+                            <div class="ct-field">
+                                <label for="ct-name">Your name <span>*</span></label>
+                                <input id="ct-name" name="name" type="text" placeholder="What should I call you?" autocomplete="name" maxlength="80" required>
+                            </div>
+                            <div class="ct-field">
+                                <label for="ct-email">Your email <span>*</span></label>
+                                <input id="ct-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" maxlength="160" required>
+                            </div>
+                        </div>
+                        <div class="ct-field">
+                            <label for="ct-recipient">Send to</label>
+                            <select id="ct-recipient" name="recipient">
+                                <option value="email">Personal email — dwanegarcia127@gmail.com</option>
+                                <option value="institutionalEmail">School email — 0326-1502@lspu.edu.ph</option>
+                            </select>
+                        </div>
+                        <div class="ct-field">
+                            <label for="ct-subject">What's this about?</label>
+                            <select id="ct-subject" name="subject">
+                                <option value="Just saying hello">Just saying hello</option>
+                                <option value="School or a project">School or a project</option>
+                                <option value="Technology and programming">Technology and programming</option>
+                                <option value="Gaming or shared interests">Gaming or shared interests</option>
+                                <option value="Something else">Something else</option>
+                            </select>
+                        </div>
+                        <div class="ct-field">
+                            <label for="ct-message-text">Your message <span>*</span></label>
+                            <textarea id="ct-message-text" name="message" rows="6" maxlength="3000" placeholder="Hey Dwane! I came across your portfolio and..." required></textarea>
+                        </div>
+                        <div class="ct-form-end">
+                            <button type="submit" class="ct-submit" id="ct-submit">Copy your message <span aria-hidden="true">↗</span></button>
+                            <span id="ct-count" class="ct-count">0 / 3000</span>
+                        </div>
+                        <p class="ct-form-hint" id="ct-form-hint">This opens your email app with your message prepared. You must press Send there; this website does not deliver messages automatically.</p>
+                        <p class="ct-form-status" id="ct-form-status" role="status" aria-live="polite"></p>
+                        <div class="ct-fallback" id="ct-fallback" hidden>
+                            <label for="ct-copy-fallback">Your prepared message (select and copy):</label>
+                            <textarea id="ct-copy-fallback" readonly rows="6"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <aside class="ct-aside-panel">
+                    <p class="ct-aside-label">A LITTLE MORE ABOUT ME</p>
+                    <h3>Let's talk about the things that make us <em>curious.</em></h3>
+                    <p>I'm a Computer Science student who enjoys exploring code, technology, and all sorts of interests outside the classroom.</p>
+                    <div class="ct-topic-list">
+                        <a href="hobbies.html"><span>Technology &amp; Hobbies</span><span aria-hidden="true">↗</span></a>
+                        <a href="favorites.html"><span>Games, Music &amp; Stories</span><span aria-hidden="true">↗</span></a>
+                        <a href="dreams.html"><span>What I'm Working Toward</span><span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="ct-aside-bottom"><span aria-hidden="true">✳</span> GOOD CONVERSATIONS START WITH CURIOSITY.</div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ENDING -->
+        <section class="ct-end ct-container" aria-labelledby="ct-end-heading">
+            <p class="ct-eyebrow">03 / BEFORE YOU GO</p>
+            <h2 id="ct-end-heading">Thanks for stopping <em>by.</em></h2>
+            <p>This website is a small collection of who I am, what I enjoy, and the person I'm becoming. I'm glad you found your way here.</p>
+            <div class="ct-end-actions">
+                <a href="index.html" class="ct-end-primary">Back to Home ↗</a>
+                <a href="gallery.html" class="ct-end-secondary">Explore My Gallery ↗</a>
+            </div>
+            <span class="ct-end-mark" aria-hidden="true">D.</span>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2>Dwane's Portfolio</h2>
+        <p>A little space on the internet, made by Dwane.</p>
+        <small>© 2026 Dwane Garcia. All rights reserved.</small>
+    </footer>
+</body>
+</html>
