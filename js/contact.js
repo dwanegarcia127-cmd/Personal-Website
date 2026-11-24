@@ -1,19 +1,4 @@
-/*
-  DWANE'S CONTACT PAGE — EASY SETUP
-  ---------------------------------------------------------------
-  Fill only the values you want to make public on your website.
-  Leave a value as "" to keep that contact card inactive.
-
-  Examples (NOT your real details):
-    email: "hello@example.com"
-    github: "https://github.com/your-username"
-
-  This is a static HTML website. It has no server or message database.
-  When an email is configured, the form opens the visitor's email app.
-  Otherwise, the form copies a formatted message to the clipboard.
-*/
-
-const DWANE_CONTACT = {
+ const DWANE_CONTACT = {
     email: "dwanegarcia127@gmail.com",
     institutionalEmail: "0326-1502@lspu.edu.ph",
     github: "https://github.com/dwanegarcia127-cmd",
