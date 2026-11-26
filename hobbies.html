@@ -1,256 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies & Interests | Dwane's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/Favicon/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
 
-    <title>Hobbies & Interests | Dwane's Portfolio </title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
+  <body>
     <!-- HEADER AND NAVIGATION -->
     <header class="site-header">
-        <div class="header-container">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img
+            class="header__favicon"
+            src="./images/Favicon/favicon-32x32.png"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <span class="logo__text">Dwane<span class="logo__dot">.</span></span>
+        </a>
 
-            <a href="index.html" class="logo">
-                Dwane<span>.</span>
-            </a>
-
-            <nav class="navigation" aria-label="Main navigation">
-
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="hobbies.html" class="active">Hobbies</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="favorites.html">Favorites</a>
-                <a href="dreams.html">Dreams</a>
-                <a href="contact.html">Contact</a>
-
-            </nav>
-
-        </div>
+        <nav class="navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="hobbies.html" class="active" aria-current="page">Hobbies</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="favorites.html">Favorites</a>
+          <a href="dreams.html">Dreams</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
 
     <main class="hobbies-page">
-        <!-- INTRODUCTION -->
-        <section class="hb-hero hb-container" aria-labelledby="hb-page-title">
-            <p class="hb-eyebrow">02 / BEYOND THE EVERYDAY</p>
-            <h1 id="hb-page-title">What keeps me <span>curious.</span></h1>
-            <p class="hb-hero-intro">
-                There's more to me than studying and spending time in front of a computer.
-                From discovering how things work to getting lost in games, music, and stories,
-                these are some of the things that make my days more interesting.
+      <!-- INTRODUCTION -->
+      <section class="hb-hero hb-container" aria-labelledby="hb-page-title">
+        <p class="hb-eyebrow">02 / BEYOND THE EVERYDAY</p>
+        <h1 id="hb-page-title">What keeps me <span>curious.</span></h1>
+        <p class="hb-hero-intro">
+          There's more to me than studying and spending time in front of a
+          computer. From discovering how things work to getting lost in games,
+          music, and stories, these are some of the things that make my days
+          more interesting.
+        </p>
+        <a class="hb-scroll-link" href="#hb-featured"
+          >Explore my interests <span aria-hidden="true">↓</span></a
+        >
+      </section>
+
+      <!-- FEATURED HOBBIES -->
+      <section
+        class="hb-featured hb-container"
+        id="hb-featured"
+        aria-labelledby="hb-featured-title"
+      >
+        <div class="hb-section-heading">
+          <div>
+            <p class="hb-eyebrow">THE BIG ONES</p>
+            <h2 id="hb-featured-title">Where curiosity takes me.</h2>
+          </div>
+          <p>Two interests I always find myself coming back to.</p>
+        </div>
+
+        <!-- TECHNOLOGY -->
+        <article class="hb-feature hb-feature--tech">
+          <div class="hb-feature-copy">
+            <p class="hb-feature-number">01 / DISCOVER & LEARN</p>
+            <h3>Technology <span>&amp;</span> Computers</h3>
+            <p>
+              I've always been curious about what goes on inside computers and
+              how hardware and software work together. I enjoy learning about
+              computer components, exploring new technology, and developing my
+              programming skills.
             </p>
-            <a class="hb-scroll-link" href="#hb-featured">Explore my interests <span aria-hidden="true">↓</span></a>
-        </section>
-
-        <!-- FEATURED HOBBIES -->
-        <section class="hb-featured hb-container" id="hb-featured" aria-labelledby="hb-featured-title">
-            <div class="hb-section-heading">
-                <div>
-                    <p class="hb-eyebrow">THE BIG ONES</p>
-                    <h2 id="hb-featured-title">Where curiosity takes me.</h2>
-                </div>
-                <p>Two interests I always find myself coming back to.</p>
+            <p>
+              Seeing a friend's Arduino Uno project made me even more interested
+              in creating something of my own someday. There's still so much I
+              want to learn, and that's what makes technology exciting to me.
+            </p>
+            <div class="hb-tags" aria-label="Technology interests">
+              <span>Computer Hardware</span><span>Programming</span
+              ><span>Arduino</span>
             </div>
-
-            <!-- TECHNOLOGY -->
-            <article class="hb-feature hb-feature--tech">
-                <div class="hb-feature-copy">
-                    <p class="hb-feature-number">01 / DISCOVER & LEARN</p>
-                    <h3>Technology <span>&amp;</span> Computers</h3>
-                    <p>
-                        I've always been curious about what goes on inside computers and how
-                        hardware and software work together. I enjoy learning about computer
-                        components, exploring new technology, and developing my programming skills.
-                    </p>
-                    <p>
-                        Seeing a friend's Arduino Uno project made me even more interested in
-                        creating something of my own someday. There's still so much I want to learn,
-                        and that's what makes technology exciting to me.
-                    </p>
-                    <div class="hb-tags" aria-label="Technology interests">
-                        <span>Computer Hardware</span><span>Programming</span><span>Arduino</span>
-                    </div>
-                </div>
-                <div class="hb-feature-visual hb-tech-visual" aria-label="Decorative code-themed illustration">
-                    <div class="hb-code-window" aria-hidden="true">
-                        <div class="hb-code-top"><i></i><i></i><i></i><span>curiosity.cs</span></div>
-                        <div class="hb-code-lines">
-                            <p><span class="hb-code-purple">string</span> interest = <span
-                                    class="hb-code-beige">"Technology"</span>;</p>
-                            <p><span class="hb-code-purple">bool</span> stillLearning = <span
-                                    class="hb-code-beige">true</span>;</p>
-                            <p class="hb-code-gap"><span class="hb-code-purple">while</span> (stillLearning) {</p>
-                            <p class="hb-code-indent">Explore();</p>
-                            <p class="hb-code-indent">KeepImproving();</p>
-                            <p>}</p>
-                        </div>
-                    </div>
-                    <span class="hb-visual-mark" aria-hidden="true">&lt;/&gt;</span>
-                </div>
-            </article>
-
-            <!-- GAMING -->
-            <article class="hb-feature hb-feature--games">
-                <div class="hb-feature-copy">
-                    <p class="hb-feature-number">02 / PLAY & EXPLORE</p>
-                    <h3>Gaming <span>&amp;</span> Adventures</h3>
-                    <p>
-                        Gaming is one of my favorite ways to unwind. Sometimes I enjoy the
-                        competitive side of Valorant, and other times I just want to explore,
-                        build, or have fun with friends in Minecraft and Roblox.
-                    </p>
-                    <p>
-                        I also enjoy osu! Each game brings something different, whether it's
-                        a challenge, a new world to explore, or a memorable moment with friends.
-                    </p>
-                    <div class="hb-tags" aria-label="Games I enjoy">
-                        <span>Valorant</span><span>Minecraft</span><span>Roblox</span><span>osu!</span>
-                    </div>
-                    <details class="hb-gaming-clip">
-                        <summary>Watch a Minecraft moment (9 seconds)</summary>
-
-                        <video controls playsinline preload="metadata">
-                            <source src="images/hobbies/minecraft-clip.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </details>
-                </div>
-                <div class="hb-feature-visual hb-games-visual">
-                    <img src="images/fun-facts/games/minecraft.png"
-                        alt="A Minecraft multiplayer adventure with friends near an End portal" loading="lazy">
-                    <div class="hb-image-caption"><span>IN MY ELEMENT</span><strong>Play. Explore. Repeat.</strong>
-                    </div>
-                </div>
-            </article>
-        </section>
-
-        <!-- MORE INTERESTS -->
-        <section class="hb-more hb-container" aria-labelledby="hb-more-title">
-            <div class="hb-section-heading">
-                <div>
-                    <p class="hb-eyebrow">BEYOND THE SCREEN</p>
-                    <h2 id="hb-more-title">A little bit of everything.</h2>
-                </div>
-                <p>The small things that turn an ordinary day into a good one.</p>
+          </div>
+          <div
+            class="hb-feature-visual hb-tech-visual"
+            aria-label="Decorative code-themed illustration"
+          >
+            <div class="hb-code-window" aria-hidden="true">
+              <div class="hb-code-top">
+                <i></i><i></i><i></i><span>curiosity.cs</span>
+              </div>
+              <div class="hb-code-lines">
+                <p>
+                  <span class="hb-code-purple">string</span> interest =
+                  <span class="hb-code-beige">"Technology"</span>;
+                </p>
+                <p>
+                  <span class="hb-code-purple">bool</span> stillLearning =
+                  <span class="hb-code-beige">true</span>;
+                </p>
+                <p class="hb-code-gap">
+                  <span class="hb-code-purple">while</span> (stillLearning) {
+                </p>
+                <p class="hb-code-indent">Explore();</p>
+                <p class="hb-code-indent">KeepImproving();</p>
+                <p>}</p>
+              </div>
             </div>
+            <span class="hb-visual-mark" aria-hidden="true">&lt;/&gt;</span>
+          </div>
+        </article>
 
-            <div class="hb-interest-grid">
-                <article class="hb-interest-card hb-card--music">
-                    <div class="hb-interest-head"><span>03 / LISTEN</span><span aria-hidden="true">♫</span></div>
-                    <h3>Music for Every Mood</h3>
-                    <p>
-
-                    <p>
-
-                    <p>
-                        My playlist doesn't stick to just one genre.
-                        From IV OF SPADES and Daniel Caesar to
-                        genggeng tracks and random discoveries,
-                        I listen to whatever catches my ear.
-                        Aside from listening, I also enjoy playing
-                        the guitar and learning new things along the way.
-                    </p>
-
-                    </p>
-
-                    </p>
-                    <p class="hb-interest-foot">No fixed genre. Just good music.</p>
-                </article>
-
-                <article class="hb-interest-card hb-card--watch">
-                    <div class="hb-interest-head"><span>04 / WATCH</span><span aria-hidden="true">▣</span></div>
-                    <h3>Movies, Series <span>&amp;</span> Anime</h3>
-                    <p>
-                        I enjoy watching stories unfold, whether it's a movie, a series, or an
-                        anime. I love the excitement of finding something new and having a show
-                        or film to look forward to.
-                    </p>
-                    <p class="hb-interest-foot">Always looking for the next good watch.</p>
-                </article>
-
-                <article class="hb-interest-card hb-card--read">
-                    <div class="hb-interest-head"><span>05 / READ</span><span aria-hidden="true">▤</span></div>
-                    <h3>Stories on the Page</h3>
-                    <p>
-                        Reading manhwa is another way I like to spend my free time. Lookism
-                        and Wind Breaker are among the stories that keep me hooked, especially
-                        when the characters and plot pull me in.
-                    </p>
-                    <p class="hb-interest-foot">One more chapter... and then another.</p>
-                </article>
-
-                <article class="hb-interest-card hb-card--memories">
-                    <div class="hb-interest-head"><span>06 / EXPERIENCE</span><span aria-hidden="true">✳</span></div>
-                    <h3>Making Memories</h3>
-                    <p>
-                        I value the time I get to spend with my family and friends. Whether
-                        we're hanging out, going somewhere, or simply laughing together,
-                        it's usually the unplanned moments I remember most.
-                    </p>
-                    <p class="hb-interest-foot">The best moments don't need a big plan.</p>
-                </article>
+        <!-- GAMING -->
+        <article class="hb-feature hb-feature--games">
+          <div class="hb-feature-copy">
+            <p class="hb-feature-number">02 / PLAY & EXPLORE</p>
+            <h3>Gaming <span>&amp;</span> Adventures</h3>
+            <p>
+              Gaming is one of my favorite ways to unwind. Sometimes I enjoy the
+              competitive side of Valorant, and other times I just want to
+              explore, build, or have fun with friends in Minecraft and Roblox.
+            </p>
+            <p>
+              I also enjoy osu! Each game brings something different, whether
+              it's a challenge, a new world to explore, or a memorable moment
+              with friends.
+            </p>
+            <div class="hb-tags" aria-label="Games I enjoy">
+              <span>Valorant</span><span>Minecraft</span><span>Roblox</span
+              ><span>osu!</span>
             </div>
+            <details class="hb-gaming-clip">
+              <summary>Watch a Minecraft moment (9 seconds)</summary>
 
-            <!-- SMALL PHOTO STRIP: three existing personal moments, not a duplicate gallery -->
-            <div class="hb-moments-strip" aria-label="A few glimpses of my interests">
-                <figure>
-                    <img src="images/fun-facts/games/valorant.png" alt="Valorant victory screen from one of my matches"
-                        loading="lazy">
-                    <figcaption>A little competition</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/fun-facts/memories/band-night.jpg" alt="Friends posing with musical instruments"
-                        loading="lazy">
-                    <figcaption>Music and company</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/fun-facts/memories/cycling.jpg" alt="A cycling outing with friends beside a river"
-                        loading="lazy">
-                    <figcaption>Outside, making memories</figcaption>
-                </figure>
+              <video controls playsinline preload="metadata">
+                <source
+                  src="images/hobbies/minecraft-clip.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML5 video.
+              </video>
+            </details>
+          </div>
+          <div class="hb-feature-visual hb-games-visual">
+            <img
+              src="images/fun-facts/games/minecraft.png"
+              alt="A Minecraft multiplayer adventure with friends near an End portal"
+              loading="lazy"
+            />
+            <div class="hb-image-caption">
+              <span>IN MY ELEMENT</span><strong>Play. Explore. Repeat.</strong>
             </div>
-        </section>
+          </div>
+        </article>
+      </section>
 
-        <!-- CONTINUE EXPLORING -->
-        <section class="hb-next hb-container" aria-labelledby="hb-next-title">
-            <p class="hb-eyebrow">KEEP EXPLORING</p>
-            <h2 id="hb-next-title">There's more to the story.</h2>
-            <p>These hobbies are just a part of who I am. Take a look at the things I love and the moments I've
-                collected along the way.</p>
-            <div class="hb-next-links">
-                <a href="favorites.html">See My Favorites <span aria-hidden="true">↗</span></a>
-                <a href="gallery.html">Visit My Gallery <span aria-hidden="true">↗</span></a>
+      <!-- MORE INTERESTS -->
+      <section class="hb-more hb-container" aria-labelledby="hb-more-title">
+        <div class="hb-section-heading">
+          <div>
+            <p class="hb-eyebrow">BEYOND THE SCREEN</p>
+            <h2 id="hb-more-title">A little bit of everything.</h2>
+          </div>
+          <p>The small things that turn an ordinary day into a good one.</p>
+        </div>
+
+        <div class="hb-interest-grid">
+          <article class="hb-interest-card hb-card--music">
+            <div class="hb-interest-head">
+              <span>03 / LISTEN</span><span aria-hidden="true">♫</span>
             </div>
-        </section>
+            <h3>Music for Every Mood</h3>
+            <p>
+              My playlist doesn't stick to just one genre. From IV OF SPADES and
+              Daniel Caesar to genggeng tracks and random discoveries, I listen
+              to whatever catches my ear. Aside from listening, I also enjoy
+              playing the guitar and learning new things along the way.
+            </p>
+            <p class="hb-interest-foot">No fixed genre. Just good music.</p>
+          </article>
+
+          <article class="hb-interest-card hb-card--watch">
+            <div class="hb-interest-head">
+              <span>04 / WATCH</span><span aria-hidden="true">▣</span>
+            </div>
+            <h3>Movies, Series <span>&amp;</span> Anime</h3>
+            <p>
+              I enjoy watching stories unfold, whether it's a movie, a series,
+              or an anime. I love the excitement of finding something new and
+              having a show or film to look forward to.
+            </p>
+            <p class="hb-interest-foot">
+              Always looking for the next good watch.
+            </p>
+          </article>
+
+          <article class="hb-interest-card hb-card--read">
+            <div class="hb-interest-head">
+              <span>05 / READ</span><span aria-hidden="true">▤</span>
+            </div>
+            <h3>Stories on the Page</h3>
+            <p>
+              Reading manhwa is another way I like to spend my free time.
+              Lookism and Wind Breaker are among the stories that keep me
+              hooked, especially when the characters and plot pull me in.
+            </p>
+            <p class="hb-interest-foot">
+              One more chapter... and then another.
+            </p>
+          </article>
+
+          <article class="hb-interest-card hb-card--memories">
+            <div class="hb-interest-head">
+              <span>06 / EXPERIENCE</span><span aria-hidden="true">✳</span>
+            </div>
+            <h3>Making Memories</h3>
+            <p>
+              I value the time I get to spend with my family and friends.
+              Whether we're hanging out, going somewhere, or simply laughing
+              together, it's usually the unplanned moments I remember most.
+            </p>
+            <p class="hb-interest-foot">
+              The best moments don't need a big plan.
+            </p>
+          </article>
+        </div>
+
+        <!-- SMALL PHOTO STRIP: three existing personal moments, not a duplicate gallery -->
+        <div
+          class="hb-moments-strip"
+          aria-label="A few glimpses of my interests"
+        >
+          <figure>
+            <img
+              src="images/fun-facts/games/valorant.png"
+              alt="Valorant victory screen from one of my matches"
+              loading="lazy"
+            />
+            <figcaption>A little competition</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/fun-facts/memories/band-night.jpg"
+              alt="Friends posing with musical instruments"
+              loading="lazy"
+            />
+            <figcaption>Music and company</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/fun-facts/memories/cycling.jpg"
+              alt="A cycling outing with friends beside a river"
+              loading="lazy"
+            />
+            <figcaption>Outside, making memories</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CONTINUE EXPLORING -->
+      <section class="hb-next hb-container" aria-labelledby="hb-next-title">
+        <p class="hb-eyebrow">KEEP EXPLORING</p>
+        <h2 id="hb-next-title">There's more to the story.</h2>
+        <p>
+          These hobbies are just a part of who I am. Take a look at the things I
+          love and the moments I've collected along the way.
+        </p>
+        <div class="hb-next-links">
+          <a href="favorites.html"
+            >See My Favorites <span aria-hidden="true">↗</span></a
+          >
+          <a href="gallery.html"
+            >Visit My Gallery <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
     </main>
-
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <div class="footer-container">
+      <div class="footer-container">
+        <p class="footer-brand">Dwane's Portfolio</p>
 
-            <p class="footer-brand">
-                Dwane's Portfolio
-            </p>
+        <p class="footer-message">
+          A little space on the internet, made by Dwane.
+        </p>
 
-            <p class="footer-message">
-                A little space on the internet,
-                made by Dwane.
-            </p>
-
-            <p class="copyright">
-                &copy; 2026 Dwane Garcia.
-                All rights reserved.
-            </p>
-
-        </div>
+        <p class="copyright">&copy; 2026 Dwane Garcia. All rights reserved.</p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

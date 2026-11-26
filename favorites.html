@@ -1,295 +1,535 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1C1C1A">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1C1C1A" />
     <title>My Favorites | Dwane's Portfolio</title>
     <!-- IMPORTANT: shared stylesheet FIRST, page stylesheet SECOND -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/favorites.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/favorites.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/Favicon/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body class="favorites-page">
+  <body class="favorites-page">
     <header class="site-header">
-        <div class="header-container">
-            <a class="logo" href="index.html">Dwane<span>.</span></a>
-            <nav class="navigation" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="hobbies.html">Hobbies</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="favorites.html" class="active" aria-current="page">Favorites</a>
-                <a href="dreams.html">Dreams</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img
+            class="header__favicon"
+            src="./images/Favicon/favicon-32x32.png"
+            alt=""
+            width="32"
+            height="32"
+          />
+          <span class="logo__text">Dwane<span class="logo__dot">.</span></span>
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="hobbies.html">Hobbies</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="favorites.html" class="active" aria-current="page"
+            >Favorites</a
+          >
+          <a href="dreams.html">Dreams</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
     </header>
     <main class="fv-page">
-        <section class="fv-hero fv-container" aria-labelledby="fv-main-heading">
-            <div class="fv-hero-text">
-                <p class="fv-eyebrow">04 / MY PERSONAL PICKS</p>
-                <h1 id="fv-main-heading">Little obsessions.<br><span>Big favorites.</span></h1>
-                <p>Everyone has those things they never seem to get tired of. For me, it's a mix of games, music,
-                    stories, and food. Here's a closer look at some of my personal favorites.</p>
-                <a class="fv-text-link" href="#fv-overview">Explore my favorites <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="fv-vinyl-wrap" aria-label="Explore my favorite things">
-                <a href="#fv-games" class="fv-vinyl-tag tag-play">PLAY / 01</a>
-                <a href="#fv-music" class="fv-vinyl-tag tag-listen">LISTEN / 02</a>
-                <a href="#fv-stories" class="fv-vinyl-tag tag-read">READ / 03</a>
-                <a href="#fv-food" class="fv-vinyl-tag tag-crave">CRAVE / 04</a>
+      <section class="fv-hero fv-container" aria-labelledby="fv-main-heading">
+        <div class="fv-hero-text">
+          <p class="fv-eyebrow">04 / MY PERSONAL PICKS</p>
+          <h1 id="fv-main-heading">
+            Little obsessions.<br /><span>Big favorites.</span>
+          </h1>
+          <p>
+            Everyone has those things they never seem to get tired of. For me,
+            it's a mix of games, music, stories, and food. Here's a closer look
+            at some of my personal favorites.
+          </p>
+          <a class="fv-text-link" href="#fv-overview"
+            >Explore my favorites <span aria-hidden="true">↓</span></a
+          >
+        </div>
+        <div class="fv-vinyl-wrap" aria-label="Explore my favorite things">
+          <a href="#fv-games" class="fv-vinyl-tag tag-play">PLAY / 01</a>
+          <a href="#fv-music" class="fv-vinyl-tag tag-listen">LISTEN / 02</a>
+          <a href="#fv-stories" class="fv-vinyl-tag tag-read">READ / 03</a>
+          <a href="#fv-food" class="fv-vinyl-tag tag-crave">CRAVE / 04</a>
 
-                <div class="fv-vinyl" aria-label="Vinyl record with Dwane's Favorites label">
-                    <div class="fv-vinyl-label">DWANE'S<br><strong>FAVORITES</strong><br>VOL. 04</div>
-                </div>
+          <div
+            class="fv-vinyl"
+            aria-label="Vinyl record with Dwane's Favorites label"
+          >
+            <div class="fv-vinyl-label">
+              DWANE'S<br /><strong>FAVORITES</strong><br />VOL. 04
             </div>
-        </section>
-        <section class="fv-section fv-container" id="fv-overview">
-            <div class="fv-section-head">
-                <div>
-                    <p class="fv-eyebrow">A LITTLE BIT OF EVERYTHING</p>
-                    <h2>The things I <em>love.</em></h2>
-                </div>
-                <p>Four different categories, each with a special place in my everyday life.</p>
+          </div>
+        </div>
+      </section>
+      <section class="fv-section fv-container" id="fv-overview">
+        <div class="fv-section-head">
+          <div>
+            <p class="fv-eyebrow">A LITTLE BIT OF EVERYTHING</p>
+            <h2>The things I <em>love.</em></h2>
+          </div>
+          <p>
+            Four different categories, each with a special place in my everyday
+            life.
+          </p>
+        </div>
+        <div class="fv-overview-grid">
+          <a href="#fv-games" class="fv-overview-card"
+            ><span>01 / PLAY</span><b aria-hidden="true">✧</b>
+            <h3>Games &amp; Adventures</h3>
+            <p>From competitive matches to exploring worlds with friends.</p>
+            <small>Discover my games ↗</small>
+          </a>
+          <a href="#fv-music" class="fv-overview-card"
+            ><span>02 / LISTEN</span><b aria-hidden="true">♫</b>
+            <h3>Music &amp; Artists</h3>
+            <p>Songs, artists, and sounds that match whatever mood I'm in.</p>
+            <small>Explore my music ↗</small>
+          </a>
+          <a href="#fv-stories" class="fv-overview-card"
+            ><span>03 / READ &amp; WATCH</span><b aria-hidden="true">✦</b>
+            <h3>Stories &amp; Entertainment</h3>
+            <p>Manhwa, anime, and movies that keep me interested.</p>
+            <small>See my favorites ↗</small>
+          </a>
+          <a href="#fv-food" class="fv-overview-card"
+            ><span>04 / CRAVE</span><b aria-hidden="true">✳</b>
+            <h3>Food &amp; Cravings</h3>
+            <p>The snacks, meals, and sweet treats I always enjoy.</p>
+            <small>Check my cravings ↗</small>
+          </a>
+        </div>
+      </section>
+      <section
+        class="fv-section fv-container"
+        id="fv-games"
+        aria-labelledby="fv-games-title"
+      >
+        <div class="fv-section-head">
+          <div>
+            <p class="fv-eyebrow">01 / PRESS START</p>
+            <h2 id="fv-games-title">Games I keep <em>coming back to.</em></h2>
+          </div>
+          <p>
+            Four games I enjoy for different reasons, each with its own kind of
+            adventure.
+          </p>
+        </div>
+        <div class="fv-games-grid">
+          <article class="fv-game-card">
+            <div class="fv-game-top">
+              <span>01 / COMPETITIVE</span
+              ><span class="fv-mini-arrow" aria-hidden="true">↗</span>
             </div>
-            <div class="fv-overview-grid">
-                <a href="#fv-games" class="fv-overview-card"><span>01 / PLAY</span><b aria-hidden="true">✧</b>
-                    <h3>Games &amp; Adventures</h3>
-                    <p>From competitive matches to exploring worlds with friends.</p><small>Discover my games ↗</small>
-                </a>
-                <a href="#fv-music" class="fv-overview-card"><span>02 / LISTEN</span><b aria-hidden="true">♫</b>
-                    <h3>Music &amp; Artists</h3>
-                    <p>Songs, artists, and sounds that match whatever mood I'm in.</p><small>Explore my music ↗</small>
-                </a>
-                <a href="#fv-stories" class="fv-overview-card"><span>03 / READ &amp; WATCH</span><b
-                        aria-hidden="true">✦</b>
-                    <h3>Stories &amp; Entertainment</h3>
-                    <p>Manhwa, anime, and movies that keep me interested.</p><small>See my favorites ↗</small>
-                </a>
-                <a href="#fv-food" class="fv-overview-card"><span>04 / CRAVE</span><b aria-hidden="true">✳</b>
-                    <h3>Food &amp; Cravings</h3>
-                    <p>The snacks, meals, and sweet treats I always enjoy.</p><small>Check my cravings ↗</small>
-                </a>
+            <div class="fv-game-art">
+              <img
+                src="images/favorites/games/valorant.jpg"
+                alt="Valorant game logo"
+                loading="lazy"
+              />
             </div>
-        </section>
-        <section class="fv-section fv-container" id="fv-games" aria-labelledby="fv-games-title">
-            <div class="fv-section-head">
-                <div>
-                    <p class="fv-eyebrow">01 / PRESS START</p>
-                    <h2 id="fv-games-title">Games I keep <em>coming back to.</em></h2>
-                </div>
-                <p>Four games I enjoy for different reasons, each with its own kind of adventure.</p>
+            <h3>Valorant</h3>
+            <p>
+              Competitive rounds, close calls, and the matches that keep me
+              trying again.
+            </p>
+          </article>
+          <article class="fv-game-card">
+            <div class="fv-game-top">
+              <span>02 / SANDBOX</span
+              ><span class="fv-mini-arrow" aria-hidden="true">↗</span>
             </div>
-            <div class="fv-games-grid">
-                <article class="fv-game-card">
-                    <div class="fv-game-top"><span>01 / COMPETITIVE</span><span class="fv-mini-arrow"
-                            aria-hidden="true">↗</span></div>
-                    <div class="fv-game-art"><img src="images/favorites/games/valorant.jpg" alt="Valorant game logo"
-                            loading="lazy"></div>
-                    <h3>Valorant</h3>
-                    <p>Competitive rounds, close calls, and the matches that keep me trying again.</p>
-                </article>
-                <article class="fv-game-card">
-                    <div class="fv-game-top"><span>02 / SANDBOX</span><span class="fv-mini-arrow"
-                            aria-hidden="true">↗</span></div>
-                    <div class="fv-game-art"><img src="images/favorites/games/minecraft.jpg" alt="Minecraft game logo"
-                            loading="lazy"></div>
-                    <h3>Minecraft</h3>
-                    <p>Building, discovering, and making memories in a world that never seems to end.</p>
-                </article>
-                <article class="fv-game-card">
-                    <div class="fv-game-top"><span>03 / ADVENTURE</span><span class="fv-mini-arrow"
-                            aria-hidden="true">↗</span></div>
-                    <div class="fv-game-art"><img src="images/favorites/games/roblox.jpg" alt="Roblox game logo"
-                            loading="lazy"></div>
-                    <h3>Roblox</h3>
-                    <p>Different experiences to explore, especially when friends are joining in.</p>
-                </article>
-                <article class="fv-game-card">
-                    <div class="fv-game-top"><span>04 / RHYTHM</span><span class="fv-mini-arrow"
-                            aria-hidden="true">↗</span></div>
-                    <div class="fv-game-art"><img src="images/favorites/games/osu.jpg" alt="osu! game logo"
-                            loading="lazy"></div>
-                    <h3>osu!</h3>
-                    <p>A combination of music, timing, and concentration I keep coming back to.</p>
-                </article>
+            <div class="fv-game-art">
+              <img
+                src="images/favorites/games/minecraft.jpg"
+                alt="Minecraft game logo"
+                loading="lazy"
+              />
             </div>
-        </section>
-        <section class="fv-section fv-container" id="fv-music" aria-labelledby="fv-music-title">
-            <div class="fv-section-head">
-                <div>
-                    <p class="fv-eyebrow">02 / ON REPEAT</p>
-                    <h2 id="fv-music-title">The soundtrack <em>of my days.</em></h2>
-                </div>
-                <p>No fixed genre. Hover over a song card to reveal its Spotify player. On touchscreens, the players are always visible.</p>
+            <h3>Minecraft</h3>
+            <p>
+              Building, discovering, and making memories in a world that never
+              seems to end.
+            </p>
+          </article>
+          <article class="fv-game-card">
+            <div class="fv-game-top">
+              <span>03 / ADVENTURE</span
+              ><span class="fv-mini-arrow" aria-hidden="true">↗</span>
             </div>
-            <div class="fv-songs-grid">
-                <article class="fv-song-card">
-                    <div class="fv-song-head"><span class="fv-song-graphic" aria-hidden="true">♫</span><span
-                            class="fv-song-genre">IN MY ROTATION</span></div>
-                    <div class="fv-song-info">
-                        <h3>Mundo</h3>
-                        <p>IV OF SPADES</p>
-                    </div>
-                    <div class="fv-song-player"><iframe loading="lazy" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/track/61vyXXtY7OSYFRtSzv5ehw?theme=0" width="100%"
-                            height="152" frameborder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            title="Spotify player: Mundo by IV OF SPADES"></iframe></div>
-                </article>
-                <article class="fv-song-card">
-                    <div class="fv-song-head"><span class="fv-song-graphic" aria-hidden="true">♫</span><span
-                            class="fv-song-genre">IN MY ROTATION</span></div>
-                    <div class="fv-song-info">
-                        <h3>Last Night on Earth</h3>
-                        <p>Green Day</p>
-                    </div>
-                    <div class="fv-song-player"><iframe loading="lazy" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/track/5TpPSTItCwtZ8Sltr3vdzm?theme=0" width="100%"
-                            height="152" frameborder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            title="Spotify player: Last Night on Earth by Green Day"></iframe></div>
-                </article>
-                <article class="fv-song-card">
-                    <div class="fv-song-head"><span class="fv-song-graphic" aria-hidden="true">♫</span><span
-                            class="fv-song-genre">IN MY ROTATION</span></div>
-                    <div class="fv-song-info">
-                        <h3>Babaero</h3>
-                        <p>gins&amp;melodies feat. Hev Abi</p>
-                    </div>
-                    <div class="fv-song-player"><iframe loading="lazy" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/track/0NJAqnvbF6vzripOB7PclP?theme=0" width="100%"
-                            height="152" frameborder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            title="Spotify player: Babaero by gins&amp;melodies feat. Hev Abi"></iframe></div>
-                </article>
-                <article class="fv-song-card">
-                    <div class="fv-song-head"><span class="fv-song-graphic" aria-hidden="true">♫</span><span
-                            class="fv-song-genre">IN MY ROTATION</span></div>
-                    <div class="fv-song-info">
-                        <h3>Japanese Denim</h3>
-                        <p>Daniel Caesar</p>
-                    </div>
-                    <div class="fv-song-player"><iframe loading="lazy" style="border-radius:12px"
-                            src="https://open.spotify.com/embed/track/7IVukH71OXfAu3KudrrizN?theme=0" width="100%"
-                            height="152" frameborder="0" allowfullscreen=""
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                            title="Spotify player: Japanese Denim by Daniel Caesar"></iframe></div>
-                </article>
+            <div class="fv-game-art">
+              <img
+                src="images/favorites/games/roblox.jpg"
+                alt="Roblox game logo"
+                loading="lazy"
+              />
             </div>
-            <blockquote class="fv-quote">“No fixed genre. Just good music.”</blockquote>
-        </section>
-        <section class="fv-section fv-container" id="fv-stories" aria-labelledby="fv-stories-title">
-            <div class="fv-section-head">
-                <div>
-                    <p class="fv-eyebrow">03 / ONE MORE CHAPTER</p>
-                    <h2 id="fv-stories-title">Stories worth <em>following.</em></h2>
-                </div>
-                <p>From manhwa covers to anime and movie posters, these are some worlds that catch my attention.</p>
+            <h3>Roblox</h3>
+            <p>
+              Different experiences to explore, especially when friends are
+              joining in.
+            </p>
+          </article>
+          <article class="fv-game-card">
+            <div class="fv-game-top">
+              <span>04 / RHYTHM</span
+              ><span class="fv-mini-arrow" aria-hidden="true">↗</span>
             </div>
-            <div class="fv-stories-grid">
-                <article class="fv-story-card">
-                    <div class="fv-cover"><img src="images/favorites/entertainment/lookism.jpg"
-                            alt="Cover or poster for Lookism" loading="lazy"></div>
-                    <div class="fv-story-copy"><span class="fv-eyebrow">MANHWA</span>
-                        <h3>Lookism</h3>
-                        <p>The characters, transformations, and storylines keep me invested.</p>
-                    </div>
-                </article>
-                <article class="fv-story-card">
-                    <div class="fv-cover"><img src="images/favorites/entertainment/windbreaker.jpg"
-                            alt="Cover or poster for Wind Breaker" loading="lazy"></div>
-                    <div class="fv-story-copy"><span class="fv-eyebrow">MANHWA</span>
-                        <h3>Wind Breaker</h3>
-                        <p>A manhwa about cycling, friendship, and finding your own pace.</p>
-                    </div>
-                </article>
-                <article class="fv-story-card">
-                    <div class="fv-cover"><img src="images/favorites/entertainment/jjk.jpg"
-                            alt="Cover or poster for Jujutsu Kaisen" loading="lazy"></div>
-                    <div class="fv-story-copy"><span class="fv-eyebrow">ANIME</span>
-                        <h3>Jujutsu Kaisen</h3>
-                        <p>Action-packed stories with memorable characters and moments.</p>
-                    </div>
-                </article>
-                <article class="fv-story-card">
-                    <div class="fv-cover"><img src="images/favorites/entertainment/demonslayer.jpg"
-                            alt="Cover or poster for Demon Slayer" loading="lazy"></div>
-                    <div class="fv-story-copy"><span class="fv-eyebrow">ANIME</span>
-                        <h3>Demon Slayer</h3>
-                        <p>A visual adventure full of action and emotion.</p>
-                    </div>
-                </article>
-                <article class="fv-story-card">
-                    <div class="fv-cover"><img src="images/favorites/entertainment/doomsday.jpg"
-                            alt="Cover or poster for Marvel / Avengers: Doomsday" loading="lazy"></div>
-                    <div class="fv-story-copy"><span class="fv-eyebrow">MOVIES</span>
-                        <h3>Marvel / Avengers: Doomsday</h3>
-                        <p>One of the stories I look forward to seeing on the big screen.</p>
-                    </div>
-                </article>
+            <div class="fv-game-art">
+              <img
+                src="images/favorites/games/osu.jpg"
+                alt="osu! game logo"
+                loading="lazy"
+              />
             </div>
-        </section>
-        <section class="fv-section fv-container" id="fv-food" aria-labelledby="fv-food-title">
-            <div class="fv-section-head">
-                <div>
-                    <p class="fv-eyebrow">04 / ALWAYS HUNGRY</p>
-                    <h2 id="fv-food-title">My comfort <em>cravings.</em></h2>
-                </div>
-                <p>From savory snacks to sweet treats, these are a few things I always crave.</p>
+            <h3>osu!</h3>
+            <p>
+              A combination of music, timing, and concentration I keep coming
+              back to.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section
+        class="fv-section fv-container"
+        id="fv-music"
+        aria-labelledby="fv-music-title"
+      >
+        <div class="fv-section-head">
+          <div>
+            <p class="fv-eyebrow">02 / ON REPEAT</p>
+            <h2 id="fv-music-title">The soundtrack <em>of my days.</em></h2>
+          </div>
+          <p>
+            No fixed genre. Hover over a song card to reveal its Spotify player.
+            On touchscreens, the players are always visible.
+          </p>
+        </div>
+        <div class="fv-songs-grid">
+          <article class="fv-song-card">
+            <div class="fv-song-head">
+              <span class="fv-song-graphic" aria-hidden="true">♫</span
+              ><span class="fv-song-genre">IN MY ROTATION</span>
             </div>
-            <div class="fv-food-grid">
-                <article class="fv-food-card">
-                    <div class="fv-food-art"><img src="images/favorites/food/siomai.png" alt="Siomai" loading="lazy">
-                    </div>
-                    <div class="fv-food-details"><span class="fv-eyebrow">01 / ALWAYS HUNGRY</span>
-                        <h3>Siomai</h3>
-                        <p>My go-to snack that I almost never turn down.</p>
-                    </div>
-                </article>
-                <article class="fv-food-card">
-                    <div class="fv-food-art"><img src="images/favorites/food/french-fries.png" alt="French Fries"
-                            loading="lazy"></div>
-                    <div class="fv-food-details"><span class="fv-eyebrow">02 / ALWAYS HUNGRY</span>
-                        <h3>French Fries</h3>
-                        <p>Because fries are good at pretty much any time.</p>
-                    </div>
-                </article>
-                <article class="fv-food-card">
-                    <div class="fv-food-art"><img src="images/favorites/food/shawarma.png" alt="Shawarma"
-                            loading="lazy"></div>
-                    <div class="fv-food-details"><span class="fv-eyebrow">03 / ALWAYS HUNGRY</span>
-                        <h3>Shawarma</h3>
-                        <p>Something filling, flavorful, and always satisfying.</p>
-                    </div>
-                </article>
-                <article class="fv-food-card">
-                    <div class="fv-food-art"><img src="images/favorites/food/ice-cream.png" alt="Ice Cream"
-                            loading="lazy"></div>
-                    <div class="fv-food-details"><span class="fv-eyebrow">04 / ALWAYS HUNGRY</span>
-                        <h3>Ice Cream</h3>
-                        <p>There is always a little room left for dessert.</p>
-                    </div>
-                </article>
+            <div class="fv-song-info">
+              <h3>Mundo</h3>
+              <p>IV OF SPADES</p>
             </div>
-            <blockquote class="fv-quote">“Sometimes, I feel like there's a black hole in my stomach.”</blockquote>
-        </section>
-        <section class="fv-next fv-container">
-            <p class="fv-eyebrow">KEEP EXPLORING</p>
-            <h2>There's always <em>more to discover.</em></h2>
-            <p>These favorites are only one part of who I am. Take a look at the memories I've collected and the goals
-                I'm working toward.</p>
-            <div class="fv-next-links"><a href="gallery.html">Visit My Gallery ↗</a><a href="dreams.html">Explore My
-                    Dreams ↗</a></div>
-        </section>
+            <div class="fv-song-player">
+              <iframe
+                loading="lazy"
+                style="border-radius: 12px"
+                src="https://open.spotify.com/embed/track/61vyXXtY7OSYFRtSzv5ehw?theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  fullscreen;
+                  picture-in-picture;
+                "
+                title="Spotify player: Mundo by IV OF SPADES"
+              ></iframe>
+            </div>
+          </article>
+          <article class="fv-song-card">
+            <div class="fv-song-head">
+              <span class="fv-song-graphic" aria-hidden="true">♫</span
+              ><span class="fv-song-genre">IN MY ROTATION</span>
+            </div>
+            <div class="fv-song-info">
+              <h3>Last Night on Earth</h3>
+              <p>Green Day</p>
+            </div>
+            <div class="fv-song-player">
+              <iframe
+                loading="lazy"
+                style="border-radius: 12px"
+                src="https://open.spotify.com/embed/track/5TpPSTItCwtZ8Sltr3vdzm?theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  fullscreen;
+                  picture-in-picture;
+                "
+                title="Spotify player: Last Night on Earth by Green Day"
+              ></iframe>
+            </div>
+          </article>
+          <article class="fv-song-card">
+            <div class="fv-song-head">
+              <span class="fv-song-graphic" aria-hidden="true">♫</span
+              ><span class="fv-song-genre">IN MY ROTATION</span>
+            </div>
+            <div class="fv-song-info">
+              <h3>Babaero</h3>
+              <p>gins&amp;melodies feat. Hev Abi</p>
+            </div>
+            <div class="fv-song-player">
+              <iframe
+                loading="lazy"
+                style="border-radius: 12px"
+                src="https://open.spotify.com/embed/track/0NJAqnvbF6vzripOB7PclP?theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  fullscreen;
+                  picture-in-picture;
+                "
+                title="Spotify player: Babaero by gins&amp;melodies feat. Hev Abi"
+              ></iframe>
+            </div>
+          </article>
+          <article class="fv-song-card">
+            <div class="fv-song-head">
+              <span class="fv-song-graphic" aria-hidden="true">♫</span
+              ><span class="fv-song-genre">IN MY ROTATION</span>
+            </div>
+            <div class="fv-song-info">
+              <h3>Japanese Denim</h3>
+              <p>Daniel Caesar</p>
+            </div>
+            <div class="fv-song-player">
+              <iframe
+                loading="lazy"
+                style="border-radius: 12px"
+                src="https://open.spotify.com/embed/track/7IVukH71OXfAu3KudrrizN?theme=0"
+                width="100%"
+                height="152"
+                frameborder="0"
+                allowfullscreen=""
+                allow="
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  fullscreen;
+                  picture-in-picture;
+                "
+                title="Spotify player: Japanese Denim by Daniel Caesar"
+              ></iframe>
+            </div>
+          </article>
+        </div>
+        <blockquote class="fv-quote">
+          “No fixed genre. Just good music.”
+        </blockquote>
+      </section>
+      <section
+        class="fv-section fv-container"
+        id="fv-stories"
+        aria-labelledby="fv-stories-title"
+      >
+        <div class="fv-section-head">
+          <div>
+            <p class="fv-eyebrow">03 / ONE MORE CHAPTER</p>
+            <h2 id="fv-stories-title">Stories worth <em>following.</em></h2>
+          </div>
+          <p>
+            From manhwa covers to anime and movie posters, these are some worlds
+            that catch my attention.
+          </p>
+        </div>
+        <div class="fv-stories-grid">
+          <article class="fv-story-card">
+            <div class="fv-cover">
+              <img
+                src="images/favorites/entertainment/lookism.jpg"
+                alt="Cover or poster for Lookism"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-story-copy">
+              <span class="fv-eyebrow">MANHWA</span>
+              <h3>Lookism</h3>
+              <p>
+                The characters, transformations, and storylines keep me
+                invested.
+              </p>
+            </div>
+          </article>
+          <article class="fv-story-card">
+            <div class="fv-cover">
+              <img
+                src="images/favorites/entertainment/windbreaker.jpg"
+                alt="Cover or poster for Wind Breaker"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-story-copy">
+              <span class="fv-eyebrow">MANHWA</span>
+              <h3>Wind Breaker</h3>
+              <p>
+                A manhwa about cycling, friendship, and finding your own pace.
+              </p>
+            </div>
+          </article>
+          <article class="fv-story-card">
+            <div class="fv-cover">
+              <img
+                src="images/favorites/entertainment/jjk.jpg"
+                alt="Cover or poster for Jujutsu Kaisen"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-story-copy">
+              <span class="fv-eyebrow">ANIME</span>
+              <h3>Jujutsu Kaisen</h3>
+              <p>
+                Action-packed stories with memorable characters and moments.
+              </p>
+            </div>
+          </article>
+          <article class="fv-story-card">
+            <div class="fv-cover">
+              <img
+                src="images/favorites/entertainment/demonslayer.jpg"
+                alt="Cover or poster for Demon Slayer"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-story-copy">
+              <span class="fv-eyebrow">ANIME</span>
+              <h3>Demon Slayer</h3>
+              <p>A visual adventure full of action and emotion.</p>
+            </div>
+          </article>
+          <article class="fv-story-card">
+            <div class="fv-cover">
+              <img
+                src="images/favorites/entertainment/doomsday.jpg"
+                alt="Cover or poster for Marvel / Avengers: Doomsday"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-story-copy">
+              <span class="fv-eyebrow">MOVIES</span>
+              <h3>Marvel / Avengers: Doomsday</h3>
+              <p>
+                One of the stories I look forward to seeing on the big screen.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section
+        class="fv-section fv-container"
+        id="fv-food"
+        aria-labelledby="fv-food-title"
+      >
+        <div class="fv-section-head">
+          <div>
+            <p class="fv-eyebrow">04 / ALWAYS HUNGRY</p>
+            <h2 id="fv-food-title">My comfort <em>cravings.</em></h2>
+          </div>
+          <p>
+            From savory snacks to sweet treats, these are a few things I always
+            crave.
+          </p>
+        </div>
+        <div class="fv-food-grid">
+          <article class="fv-food-card">
+            <div class="fv-food-art">
+              <img
+                src="images/favorites/food/siomai.png"
+                alt="Siomai"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-food-details">
+              <span class="fv-eyebrow">01 / ALWAYS HUNGRY</span>
+              <h3>Siomai</h3>
+              <p>My go-to snack that I almost never turn down.</p>
+            </div>
+          </article>
+          <article class="fv-food-card">
+            <div class="fv-food-art">
+              <img
+                src="images/favorites/food/french-fries.png"
+                alt="French Fries"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-food-details">
+              <span class="fv-eyebrow">02 / ALWAYS HUNGRY</span>
+              <h3>French Fries</h3>
+              <p>Because fries are good at pretty much any time.</p>
+            </div>
+          </article>
+          <article class="fv-food-card">
+            <div class="fv-food-art">
+              <img
+                src="images/favorites/food/shawarma.png"
+                alt="Shawarma"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-food-details">
+              <span class="fv-eyebrow">03 / ALWAYS HUNGRY</span>
+              <h3>Shawarma</h3>
+              <p>Something filling, flavorful, and always satisfying.</p>
+            </div>
+          </article>
+          <article class="fv-food-card">
+            <div class="fv-food-art">
+              <img
+                src="images/favorites/food/ice-cream.png"
+                alt="Ice Cream"
+                loading="lazy"
+              />
+            </div>
+            <div class="fv-food-details">
+              <span class="fv-eyebrow">04 / ALWAYS HUNGRY</span>
+              <h3>Ice Cream</h3>
+              <p>There is always a little room left for dessert.</p>
+            </div>
+          </article>
+        </div>
+        <blockquote class="fv-quote">
+          “Sometimes, I feel like there's a black hole in my stomach.”
+        </blockquote>
+      </section>
+      <section class="fv-next fv-container">
+        <p class="fv-eyebrow">KEEP EXPLORING</p>
+        <h2>There's always <em>more to discover.</em></h2>
+        <p>
+          These favorites are only one part of who I am. Take a look at the
+          memories I've collected and the goals I'm working toward.
+        </p>
+        <div class="fv-next-links">
+          <a href="gallery.html">Visit My Gallery ↗</a
+          ><a href="dreams.html">Explore My Dreams ↗</a>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
-        <h2>Dwane's Portfolio</h2>
-        <p>A little space on the internet, made by Dwane.</p>
-        <small>© 2026 Dwane Garcia. All rights reserved.</small>
+      <h2>Dwane's Portfolio</h2>
+      <p>A little space on the internet, made by Dwane.</p>
+      <small>© 2026 Dwane Garcia. All rights reserved.</small>
     </footer>
-</body>
-
+  </body>
 </html>
